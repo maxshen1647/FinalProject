@@ -52,8 +52,10 @@ if (Meteor.isClient) {
       Tasks.remove(this._id);
     }
   });
-
+Accounts.config(sendVerificationEmail);
   // Accounts.ui.config({
   // passwordSignupFields: "EMAIL_ONLY"
   // });
 }
+
+
