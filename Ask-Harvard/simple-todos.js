@@ -1,4 +1,5 @@
 Tasks = new Mongo.Collection("tasks");
+Accounts.config(sendVerificationEmail);
 
 if (Meteor.isClient) {
   // This code only runs on the client
@@ -52,7 +53,6 @@ if (Meteor.isClient) {
       Tasks.remove(this._id);
     }
   });
-Accounts.config(sendVerificationEmail);
   // Accounts.ui.config({
   // passwordSignupFields: "EMAIL_ONLY"
   // });
