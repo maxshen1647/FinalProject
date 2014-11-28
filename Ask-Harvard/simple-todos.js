@@ -14,6 +14,9 @@ if (Meteor.isClient) {
     },
     hideCompleted: function () {
       return Session.get("hideCompleted");
+    },
+    questionsCount: function () {
+      return Tasks.find().count();
     }   
   });
 
