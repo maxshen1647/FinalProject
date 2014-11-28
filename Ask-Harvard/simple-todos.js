@@ -56,5 +56,5 @@ if (Meteor.isClient) {
    sendVerificationEmail: true
    });
 }
-
+//testing
 
