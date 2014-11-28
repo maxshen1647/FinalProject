@@ -7,6 +7,10 @@
     <header>
       <h1>askHarvard</h1>
       <h2>{{tasksCount}} questions asked</h2>
+      <label class="hide-completed">
+        <input type="checkbox" checked="{{hideCompleted}}" />
+        Hide Completed Tasks
+      </label>
       <form class="new-task">
         <input type="text" name="text" placeholder="Ask us a question!" />
       </form>
