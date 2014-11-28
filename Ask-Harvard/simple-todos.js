@@ -53,7 +53,7 @@ if (Meteor.isClient) {
     }
   });
 
-  // Accounts.ui.config({
-  // passwordSignupFields: "EMAIL_ONLY"
-  // });
+   Accounts.config({
+   sendVerificationEmail
+   });
 }
