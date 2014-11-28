@@ -1,5 +1,4 @@
 Tasks = new Mongo.Collection("tasks");
-Accounts.config(sendVerificationEmail);
 
 if (Meteor.isClient) {
   // This code only runs on the client
