@@ -54,7 +54,7 @@ if (Meteor.isClient) {
     }
   });
    Accounts.config({
-   sendVerificationEmail
+   sendVerificationEmail: true
    });
 }
 
