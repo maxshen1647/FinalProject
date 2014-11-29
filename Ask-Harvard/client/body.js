@@ -21,12 +21,20 @@
       // This function is called when the new task form is submitted
       var text = event.target.text.value;
 
+      // if logged in, insert task with user info, else, just insert task
+      if (Meteor.user() !== null){
       Tasks.insert({
         text: text,
         createdAt: new Date(), // current time
         owner: Meteor.userId(), // _id of logged in user
         username: Meteor.user().username // username of logged in user
       });
+      } else {
+      Tasks.insert({
+        text: text,
+        createdAt: new Date(), 
+      });  
+      }
 
       // Clear form
       event.target.text.value = "";
