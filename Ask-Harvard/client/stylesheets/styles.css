@@ -43,7 +43,7 @@ header
 
 #login-buttons 
 {
-  display: right-block;
+  display: block;
 }
 
 h1 
@@ -56,7 +56,7 @@ h1
 }
 h2 
 {
-  font-size: 1em;
+  font-size: 0.75;
   margin: 0;
   margin-bottom: 10px;
   display: inline-block;

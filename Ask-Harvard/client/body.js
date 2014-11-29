@@ -38,3 +38,7 @@
       Session.set("hideCompleted", event.target.checked);
     }
   });
+
+  Accounts.ui.config({
+    passwordSignupFields: "USERNAME_AND_EMAIL"
+  });
