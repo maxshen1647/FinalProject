@@ -6,7 +6,6 @@
  * Global CSS.
  */
 
-
 body 
 {
   font-family: sans-serif;
@@ -44,12 +43,12 @@ header
 
 #login-buttons 
 {
-  display: block;
+  display: right-block;
 }
 
 h1 
 {
-  font-size: 1.5em;
+  font-size: 2em;
   margin: 0;
   margin-bottom: 10px;
   display: inline-block;
@@ -57,7 +56,7 @@ h1
 }
 h2 
 {
-  font-size: 0.75em;
+  font-size: 1em;
   margin: 0;
   margin-bottom: 10px;
   display: inline-block;
