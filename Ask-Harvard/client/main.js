@@ -10,17 +10,14 @@ Accounts.ui.config({
 //functions that do work on the body of main.html
 Template.body.helpers({
     tasks: function () {
-      if (Session.get("hideCompleted")) {
-        // If hide completed is checked, filter tasks
-        return Tasks.find({checked: {$ne: true}}, {sort: {createdAt: -1}});
-      } else {
-        // Otherwise, return all of the tasks
-        return Tasks.find({}, {sort: {createdAt: -1}});
-      }
+      // return all of the tasks
+      return Tasks.find({}, {sort: {createdAt: -1}});
     },
+
     hideCompleted: function () {
       return Session.get("hideCompleted");
     },
+    //returns number of questions in database
     questionsCount: function () {
       return Tasks.find().count();
     }   
@@ -36,18 +33,18 @@ Template.body.helpers({
       if (text == "")
         return false;
 
-      // if logged in, insert task with user info, else, just insert task
-      if (Meteor.user() !== null){
+      // if not logged in or anonymous, insert task without userinfo
+      if (Meteor.user() == null } || Session.get("hideCompleted")){
       Tasks.insert({
         text: text,
-        createdAt: new Date(), // current time
-        owner: Meteor.userId(), // _id of logged in user
-        username: Meteor.user().username // username of logged in user
+        createdAt: new Date(), // current time       
       });
       } else {
       Tasks.insert({
         text: text,
-        createdAt: new Date(), 
+        createdAt: new Date(),
+        owner: Meteor.userId(), // _id of logged in user
+        username: Meteor.user().username // username of logged in user 
       });  
       }
 
