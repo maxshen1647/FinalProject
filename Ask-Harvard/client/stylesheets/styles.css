@@ -9,8 +9,8 @@
 body 
 {
   font-family: sans-serif;
-  background-color: #315481;
-  background-image: linear-gradient(to bottom, #315481, #918e82 100%);
+  background-color: #8B2323;
+  background-image: linear-gradient(to bottom, ,#8B2323, #B0171F 100%);
   background-attachment: fixed;
 
   position: absolute;
@@ -30,7 +30,7 @@ body
   max-width: 800px;
   margin: 0 auto;
   min-height: 100%;
-  background: white;
+  background: #8B2323;
 }
 
 header 
@@ -89,9 +89,10 @@ form
   outline: 0;
 }
 
+/* Formatting for text lists */
 ul 
 {
-  margin: 0;
+  margin-top: 0;
   padding: 0;
   background: white;
   word-wrap: break-word;
