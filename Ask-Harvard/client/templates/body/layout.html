@@ -1,0 +1,25 @@
+<template name="layout">
+  <div class="container">
+    <header>
+      <h1>askHarvard</h1>
+      <h2>{{questionsCount}} questions asked</h2>
+
+      <label class="hide-completed">
+        <input type="checkbox" checked="{{hideCompleted}}" />
+        Hide completed tasks
+      </label>
+
+      {{> loginButtons}}
+
+      <form class="new-task">
+        <input type="text" name="text" placeholder="Ask us a question!" />
+      </form>
+    </header>
+
+    <ul>
+      {{#each tasks}}
+        {{> yield}}
+      {{/each}}
+    </ul>
+  </div>
+</template>
