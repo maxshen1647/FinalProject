@@ -70,6 +70,7 @@ form
   margin-top: 10px;
   margin-bottom: -10px;
   position: relative;
+
 }
 
 .new-task input 
@@ -93,6 +94,7 @@ ul
   margin: 0;
   padding: 0;
   background: white;
+  word-wrap: break-word;
 }
 
 .delete 
