@@ -1,4 +1,10 @@
-implement harvard email log in. Include DB and verification email
+implement harvard email log in and verification email
+
+use publication and subscription and find 
 When users submit the question, there is a success notification, and the question goes into a database that shows up when harvard students log in.
 When harvard students log in, they can view and answer questions 
 When a question is answered, both the question and answer will show up on the home page
+
+askharvard links to homepage
+
+capcha when you get spammed
