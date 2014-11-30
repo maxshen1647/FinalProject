@@ -21,6 +21,10 @@
       // This function is called when the new task form is submitted
       var text = event.target.text.value;
 
+      //check for blank input
+      if (text == "")
+        return false;
+
       // if logged in, insert task with user info, else, just insert task
       if (Meteor.user() !== null){
       Tasks.insert({

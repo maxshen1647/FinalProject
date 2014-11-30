@@ -48,6 +48,7 @@ header
 
 h1 
 {
+  font-family:Palatino Linotype;
   font-size: 2em;
   margin: 0;
   margin-bottom: 10px;
@@ -113,6 +114,11 @@ li
 }
 
 li .text 
+{
+  margin-left: 10px;
+}
+
+li .signature
 {
   margin-left: 10px;
 }
