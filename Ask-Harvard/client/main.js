@@ -34,7 +34,7 @@ Template.body.helpers({
         return false;
 
       // if not logged in or anonymous, insert task without userinfo
-      if (Meteor.user() == null } || Session.get("hideCompleted")){
+      if (Meteor.user() == null || Session.get("hideCompleted")){
       Tasks.insert({
         text: text,
         createdAt: new Date(), // current time       
