@@ -65,6 +65,15 @@ h2
   margin-right: 1em;
 }
 
+h6 
+{
+  font-family:Palatino Linotype;
+  font-size: 2em;
+  margin: 0;
+  margin-bottom: 10px;
+  display: inline-block;
+  margin-right: 1em;
+}
 
 form 
 {
@@ -155,4 +164,65 @@ header .hide-completed
   .new-task input {
     padding-bottom: 5px;
   }
+}
+
+/* Styling for links */
+
+/* askHarvard main link */
+/* unvisited link */
+a.askHarvard:link {
+        font-weight: bold;
+    color: #B0171F;
+    text-decoration: none;
+}
+
+/* visited link */
+a.askHarvard:visited {
+        font-weight: bold;
+    color: #B0171F;
+    text-decoration: none;
+}
+
+/* mouse over link */
+a.askHarvard:hover {
+        font-weight: bold;
+    color: #B0171F;
+    text-decoration: none;
+}
+
+/* selected link */
+a.askHarvard:active {
+        font-weight: bold;
+    color: #B0171F;
+    text-decoration: none;
+}
+
+/* Regular links */
+
+/* unvisited link */
+a:link {
+    font-weight: bold;
+    color: #3b5998;
+    text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+    font-weight: normal;
+    color: #B0171F;
+    text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+    font-weight: normal;
+    color: #CD3700;
+    text-decoration: none;
+}
+
+/* selected link */
+a.askHarvard:active {
+    font-weight: normal;
+    color: #B0171F;
+    text-decoration: none;
 }
