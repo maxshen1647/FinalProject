@@ -1,0 +1,17 @@
+<template name="homepage>"
+<form class="new-task">
+        <input type="text" name="text" placeholder="Ask us a question!" />
+      </form>
+      
+      <label class="hide-completed">
+        <input type="checkbox" checked="{{hideCompleted}}" />
+        Ask anonymously
+      </label>
+
+    <ul>
+      {{#each tasks}}
+        {{> task}}
+      {{/each}}
+    </ul>
+</template>
+ 

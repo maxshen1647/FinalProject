@@ -1,0 +1,13 @@
+<template name="layout">
+
+  <div class="container">
+    <header>
+      <h1>askHarvard</h1>
+      <h2>{{questionsCount}} questions asked</h2>
+      {{> loginButtons}}
+    </header>
+
+      {{>yield}}
+  </div>
+
+</template>
