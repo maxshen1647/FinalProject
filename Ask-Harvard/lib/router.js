@@ -5,6 +5,8 @@ Router.configure({
   // shows spinning wheel while loading for better user interface
   // (DOES NOT WORK YET) loadingTemplate: 'loading',
 
+  // redirects to notFound.html if user eters invalid url
+  notFoundTemplate: 'notFound',
   // allows client to obtain data from the main database
   // add stuff here to control what data the client can obtain
   waitOn: function() { return Meteor.subscribe('Tasks'); }
