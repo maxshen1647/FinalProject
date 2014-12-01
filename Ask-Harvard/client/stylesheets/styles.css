@@ -54,6 +54,7 @@ h1
   margin-bottom: 10px;
   display: inline-block;
   margin-right: 1em;
+  color: #B0171F;
 }
 h2 
 {
@@ -125,7 +126,7 @@ li .signature
   margin-left: 10px;
 }
 
-li.private 
+li .private 
 {
   background: #eee;
   border-color: #ddd;
