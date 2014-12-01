@@ -9,3 +9,7 @@ Router.configure({
 });
 
 Router.route('/', {name: 'homepage'});
+Router.route('/answer/:_id', {  
+	name: 'answerpage',
+	data: function() { return Tasks.findOne(this.params._id); }
+});
