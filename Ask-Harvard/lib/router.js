@@ -17,3 +17,5 @@ Router.route('/answer/:_id', {
 	name: 'answerpage',
 	data: function() { return Tasks.findOne(this.params._id); }
 });
+
+Router.onBeforeAction('dataNotFound', {only: 'answerpage'});
