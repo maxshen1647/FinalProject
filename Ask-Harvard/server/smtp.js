@@ -1,3 +1,4 @@
+// set up smtp for email verification
 Meteor.startup(function () {
   smtp = {
     username: 'askharvard@gmail.com',   // eg: server@gentlenode.com
@@ -9,6 +10,7 @@ Meteor.startup(function () {
   process.env.MAIL_URL = 'smtp://' + encodeURIComponent(smtp.username) + ':' + encodeURIComponent(smtp.password) + '@' + encodeURIComponent(smtp.server) + ':' + smtp.port;
 });
 
+// send a verification email when new user is created
 Accounts.onCreateUser(function(options, user) {
   user.profile = {};
 
@@ -20,6 +22,7 @@ Accounts.onCreateUser(function(options, user) {
   return user;
 });
 
+// configure verification email 
 Meteor.startup(function() {
   // By default, the email is sent from no-reply@meteor.com. If you wish to receive email from users asking for help with their account, be sure to set this to an email address that you can receive email at.
   Accounts.emailTemplates.from = 'askHarvard <askharvard@gmail.com>';
