@@ -5,6 +5,8 @@ When users submit the question, there is a success notification, and the questio
 When harvard students log in, they can view and answer questions 
 When a question is answered, both the question and answer will show up on the home page
 
-askharvard links to homepage
-
 capcha when you get spammed
+
+
+    Always store user state in the Session or the URL so that users are minimally disrupted when a hot code reload happens.
+    Store any state that you want to be shareable between users within the URL itself.
