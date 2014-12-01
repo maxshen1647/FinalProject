@@ -65,16 +65,6 @@ h2
   margin-right: 1em;
 }
 
-h6 
-{
-  font-family:Palatino Linotype;
-  font-size: 2em;
-  margin: 0;
-  margin-bottom: 10px;
-  display: inline-block;
-  margin-right: 1em;
-}
-
 form 
 {
   margin-top: 10px;
@@ -97,6 +87,26 @@ form
 .new-task input:focus
 {
   outline: 0;
+}
+
+
+/* Style for Ask Button */
+#submit
+{
+padding: 4px;
+font-size: 20px;
+line-height: 18px;
+color: #B0171F;
+text-align: center;
+text-shadow: 0px 1px #537516;
+text-decoration: none;
+background: url('/images/logbox/signupButton-gradient.png') repeat-x scroll center top transparent;
+border: 1px solid #00658D;
+border-radius: 4px;
+box-shadow: 0px 1px #1381AD;
+white-space: nowrap;
+width: 160px;
+align: middle;
 }
 
 ul 
@@ -156,12 +166,14 @@ header .hide-completed
     padding: 12px 15px;
   }
 
-  .search {
+  .search 
+  {
     width: 150px;
     clear: both;
   }
 
-  .new-task input {
+  .new-task input 
+  {
     padding-bottom: 5px;
   }
 }
@@ -170,57 +182,65 @@ header .hide-completed
 
 /* askHarvard main link */
 /* unvisited link */
-a.askHarvard:link {
-        font-weight: bold;
+a.askHarvard:link 
+{
+    font-weight: bold;
     color: #B0171F;
     text-decoration: none;
 }
 
 /* visited link */
-a.askHarvard:visited {
-        font-weight: bold;
+a.askHarvard:visited 
+{
+    font-weight: bold;
     color: #B0171F;
     text-decoration: none;
 }
 
 /* mouse over link */
-a.askHarvard:hover {
-        font-weight: bold;
+a.askHarvard:hover 
+{
+    font-weight: bold;
     color: #B0171F;
     text-decoration: none;
 }
 
 /* selected link */
-a.askHarvard:active {
-        font-weight: bold;
+a.askHarvard:active
+ {
+    font-weight: bold;
     color: #B0171F;
     text-decoration: none;
 }
 
 /* Regular links */
 /* unvisited link */
-a:link {
+a:link 
+{
     font-weight: bold;
     color: #3b5998;
     text-decoration: none;
 }
 
 /* visited link */
-a:visited {
+a:visited 
+{
     font-weight: normal;
     color: #B0171F;
     text-decoration: none;
 }
 
 /* mouse over link */
-a:hover {
+a:hover 
+{
     font-weight: normal;
     color: #CD3700;
     text-decoration: none;
 }
 
 /* selected link */
-a.askHarvard:active {
+a.askHarvard:active 
+{
     font-weight: normal;
     color: #B0171F;
     text-decoration: none;

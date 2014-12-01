@@ -8,6 +8,6 @@ insecure
 accounts-password
 accounts-ui
 accounts-facebook
-email
 iron:router
+email
 
