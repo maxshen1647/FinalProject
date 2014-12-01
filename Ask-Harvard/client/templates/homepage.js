@@ -7,11 +7,7 @@ Template.homepage.helpers({
 
     hideCompleted: function () {
       return Session.get("hideCompleted");
-    },
-    //returns number of questions in database
-    questionsCount: function () {
-      return Tasks.find().count();
-    }   
+    }
   });
 
   // events that happen in homepage.html
