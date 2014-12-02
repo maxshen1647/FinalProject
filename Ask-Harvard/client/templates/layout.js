@@ -11,6 +11,7 @@ Template.layout.helpers({
     }   
   });
 
+// verification popup if homepage is induced by verification link
 Template.Homepage.created = function() {
   if (Accounts._verifyEmailToken) {
     Accounts.verifyEmail(Accounts._verifyEmailToken, function(err) {
