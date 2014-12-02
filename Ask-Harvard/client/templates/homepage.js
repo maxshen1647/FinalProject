@@ -20,19 +20,22 @@ Template.homepage.helpers({
       if (text == "")
         return false;
 
-      // if not logged in or anonymous, insert task without userinfo
-      if (Meteor.user() == null || Session.get("hideCompleted")){
-      Tasks.insert({
-        text: text,
-        createdAt: new Date(), // current time       
-      });
+      // if not logged in, display alert. if anon box is checked, do not acquire username
+      if (Meteor.user() == null){
+      alert('Please sign in or register first. Thanks!');
+      } else if (Session.get("hideCompleted")){
+        Tasks.insert({
+          text: text,
+          createdAt: new Date(),
+          owner: Meteor.userId(), // _id of logged in user
+        });  
       } else {
-      Tasks.insert({
-        text: text,
-        createdAt: new Date(),
-        owner: Meteor.userId(), // _id of logged in user
-        username: Meteor.user().username // username of logged in user 
-      });  
+        Tasks.insert({
+          text: text,
+          createdAt: new Date(),
+          owner: Meteor.userId(), // _id of logged in user
+          username: Meteor.user().username // username of logged in user 
+        });
       }
 
       // Clear form
