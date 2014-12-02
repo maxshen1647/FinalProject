@@ -16,7 +16,7 @@ Router.route('/answer/:_id', {
 	name: 'answerpage',
 	data: function() { return Tasks.findOne(this.params._id); }
 });
-Router.route('/mustverify', {name: 'mustverify'});
+
 
 Router.onBeforeAction('dataNotFound', {only: 'answerpage'});
 

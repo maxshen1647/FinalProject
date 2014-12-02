@@ -13,12 +13,12 @@ Meteor.startup(function () {
 // send a verification email when new user is created
 Accounts.onCreateUser(function(options, user) {
   user.profile = {};
-  Router.go('/mustverify');
+  
   // we wait for Meteor to create the user before sending an email
   Meteor.setTimeout(function() {
     Accounts.sendVerificationEmail(user._id);
   }, 2 * 1000);
-
+  //Router.go('/mustverify');
   return user;
 });
 
@@ -45,7 +45,7 @@ Meteor.startup(function() {
 Accounts.validateLoginAttempt(function(attempt){
   if (attempt.user && attempt.user.emails && !attempt.user.emails[0].verified ) {
     console.log('email not verified');
-
+    alert('Your account has not been verified yet, we sent you an e-mail.');
     return false; // the login is aborted
   }
   return true;
