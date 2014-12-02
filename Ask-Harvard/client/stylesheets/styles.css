@@ -58,7 +58,9 @@ h1
   display: inline-block;
   margin-right: 1em;
   color: #B0171F;
+  background: url("/img/askHarvard.png")
 }
+
 h2 
 {
   font-size: 1em;
