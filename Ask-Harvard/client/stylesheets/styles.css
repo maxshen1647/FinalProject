@@ -191,7 +191,7 @@ header .hide-completed
   }
 }
 
-.head_top
+.askHarvard
 {
   display: inline-block;
   float: right;
@@ -201,7 +201,7 @@ header .hide-completed
 
 /* askHarvard main link */
 /* unvisited link */
-#ask_harvard a:link 
+a.askHarvard:link 
 {
     font-weight: bold;
     color: #fff;
@@ -210,7 +210,7 @@ header .hide-completed
 }
 
 /* visited link */
-#ask_harvard a:visited 
+a.askHarvard:visited 
 {
     font-weight: bold;
     color: #fff;
@@ -219,7 +219,7 @@ header .hide-completed
 }
 
 /* mouse over link */
-#ask_harvard a:hover 
+a.askHarvard:hover 
 {
     font-weight: bold;
     color: #fff;
@@ -232,7 +232,7 @@ header .hide-completed
 }
 
 /* selected link */
-#ask_harvard a:active
+a.askHarvard:active
  {
     font-weight: bold;
     color: #02406A;
@@ -240,7 +240,7 @@ header .hide-completed
     outline-color: #02406A;
 }
 
-#ask_harvard a:link span
+a.askHarvard:link span
 {
     font-weight: bold;
     color: #527827;
@@ -249,7 +249,7 @@ header .hide-completed
 }
 
 /* visited link */
-#ask_harvard a:visited span
+a.askHarvard:visited span
 {
     font-weight: bold;
     color: #52C027;
@@ -258,7 +258,7 @@ header .hide-completed
 }
 
 /* mouse over link */
-#ask_harvard a:hover span
+a.askHarvard:hover span
 {
     font-weight: bold;
     color: #52C027;
@@ -271,7 +271,7 @@ header .hide-completed
 }
 
 /* selected link */
-#ask_harvard a:active span
+a.askHarvard:active span
  {
     font-weight: bold;
     color: #02406A;
