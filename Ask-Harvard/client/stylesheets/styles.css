@@ -10,7 +10,7 @@ body
 {
   font-family: sans-serif;
   background-color: #315481;
-  background-image: linear-gradient(to bottom, #315481, #918e82 100%);
+  background-image: url("/img/gate.png");
   background-attachment: fixed;
 
   position: absolute;
@@ -31,14 +31,17 @@ body
   margin: 0 auto;
   min-height: 100%;
   background: white;
+
 }
 
+/* Style for askHarvard header */
 header 
 {
   background: #d2edf4;
   background-image: linear-gradient(to bottom, #d0edf5, #e1e5f0 100%);
   padding: 20px 15px 15px 15px;
   position: relative;
+  border-bottom: 1px solid #000;
 }
 
 #login-buttons 
@@ -65,23 +68,27 @@ h2
   margin-right: 1em;
 }
 
+/* Style for question display form */
 form 
 {
-  margin-top: 10px;
+  margin-top: 0px;
   margin-bottom: -10px;
   position: relative;
-
+  text-align: center;
 }
 
+/* Style for question box */
 .new-task input 
 {
   box-sizing: border-box;
-  padding: 10px 0;
+  padding: 15px 10px;
   background: transparent;
   border: none;
   width: 100%;
   padding-right: 80px;
   font-size: 1em;
+  background: linear-gradient(to bottom, #d0edf5, #e1e5f0 100%);
+  border-bottom: 1px solid #000;
 }
 
 .new-task input:focus
@@ -93,20 +100,23 @@ form
 /* Style for Ask Button */
 #submit
 {
-padding: 4px;
-font-size: 20px;
-line-height: 18px;
-color: #B0171F;
+cursor: pointer;
+padding: 1px 4px;
+font-size: 150%;
+font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+margin-top: 5px;
+line-height: 1.1;
 text-align: center;
-text-shadow: 0px 1px #537516;
-text-decoration: none;
-background: url('/images/logbox/signupButton-gradient.png') repeat-x scroll center top transparent;
-border: 1px solid #00658D;
-border-radius: 4px;
-box-shadow: 0px 1px #1381AD;
-white-space: nowrap;
+color: #FFF;
+text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+background: none repeat scroll 0% 0% #B0171F;
+border: 1px solid #464F75;
+border-radius: 8px;
 width: 160px;
-align: middle;
+}
+
+#submit:hover {
+  background: #cc3000;
 }
 
 ul 
