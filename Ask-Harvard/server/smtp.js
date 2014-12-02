@@ -41,11 +41,13 @@ Meteor.startup(function() {
   };
 });
 
+// does not allow log in until email verification link is clicked
 Accounts.validateLoginAttempt(function(attempt){
   if (attempt.user && attempt.user.emails && !attempt.user.emails[0].verified ) {
     console.log('email not verified');
 
     return false; // the login is aborted
+    window.location="/mustverify";
   }
   return true;
 }); 
