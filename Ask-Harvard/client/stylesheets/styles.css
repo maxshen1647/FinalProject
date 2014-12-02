@@ -12,8 +12,6 @@ body
   background-color: #315481;
   background-image: url("/img/gate.png");
   background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
 
   position: absolute;
   top: 0;
@@ -60,19 +58,7 @@ h1
   display: inline-block;
   margin-right: 1em;
   color: #B0171F;
-  background-image: url("/img/askHarvard.png");
 }
-
-#logo
-{
-  display: block;
-  width: 98px;
-  height: 40px;
-  padding: 0px 0px 0px 0px;
-  background: url("/img/askHarvard.png");
-  float: left;
-}
-
 h2 
 {
   font-size: 1em;
