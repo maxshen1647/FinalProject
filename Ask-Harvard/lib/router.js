@@ -22,4 +22,4 @@ Router.onBeforeAction('dataNotFound', {only: 'answerpage'});
 
 Accounts.onCreateUser(function(){
   Router.go('/mustverify');
-}
+});
