@@ -1,3 +1,8 @@
 <template name="answerpage">
   {{> task}}
+  <ul>    
+  	{{#each comments}}      
+  		{{> comment}}    
+  	{{/each}}  
+  </ul>
 </template>

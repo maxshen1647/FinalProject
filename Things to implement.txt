@@ -1,4 +1,4 @@
-implement harvard email log in and verification email
+implement harvard email log in
 
 use publication and subscription and find 
 When users submit the question, there is a success notification, and the question goes into a database that shows up when harvard students log in.
@@ -7,6 +7,7 @@ When a question is answered, both the question and answer will show up on the ho
 
 capcha when you get spammed
 
-
     Always store user state in the Session or the URL so that users are minimally disrupted when a hot code reload happens.
     Store any state that you want to be shareable between users within the URL itself.
+
+ allow editing questions
