@@ -1,6 +1,6 @@
 <template name="task">
   <li>
-    <button class="delete">&times;</button>
+    {{#if ownPost}}<button class="delete">&times;</button>{{/if}}
 
     <span class="text">{{text}}</span>
     
