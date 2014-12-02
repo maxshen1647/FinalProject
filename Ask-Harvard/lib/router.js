@@ -19,3 +19,7 @@ Router.route('/answer/:_id', {
 Router.route('/mustverify', {name: 'mustverify'});
 
 Router.onBeforeAction('dataNotFound', {only: 'answerpage'});
+
+Accounts.onCreateUser(function(){
+  Router.go('/mustverify');
+}
