@@ -47,7 +47,7 @@ Accounts.validateLoginAttempt(function(attempt){
     console.log('email not verified');
 
     return false; // the login is aborted
-    Router.go('/mustverify');
+    window.location="http://ask-harvard.meteor.com";
   }
   return true;
 }); 
