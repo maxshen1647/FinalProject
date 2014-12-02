@@ -6,6 +6,7 @@
  * Global CSS.
  */
 
+/* Styling for main body */
 body 
 {
   font-family: sans-serif;
@@ -25,6 +26,7 @@ body
   font-size: 14px;
 }
 
+/* Width and height of container */
 .container 
 {
   max-width: 800px;
@@ -46,11 +48,19 @@ header
   border-radius: 2px;
 }
 
+/* Styling for login button */
 #login-buttons 
 {
   display: block;
+  float: right;
+  color: #fff;
+  font-weight: bold;
+  font-family: Calibri;
+  font-size: 20px;
+  margin: -6px -1px;
 }
 
+/* Styling for header 1 */
 h1 
 {
   font-family: Calibri;
@@ -191,7 +201,7 @@ header .hide-completed
   }
 }
 
-.askHarvard
+.ask-harvard
 {
   display: inline-block;
   float: right;
@@ -199,9 +209,9 @@ header .hide-completed
 
 /* Styling for links */
 
-/* askHarvard main link */
+/* Specific styling for Ask Harvard Link*/
 /* unvisited link */
-a.askHarvard:link 
+#ask:link 
 {
     font-weight: bold;
     color: #fff;
@@ -210,7 +220,7 @@ a.askHarvard:link
 }
 
 /* visited link */
-a.askHarvard:visited 
+#ask:visited 
 {
     font-weight: bold;
     color: #fff;
@@ -219,7 +229,7 @@ a.askHarvard:visited
 }
 
 /* mouse over link */
-a.askHarvard:hover 
+#ask:hover 
 {
     font-weight: bold;
     color: #fff;
@@ -232,7 +242,7 @@ a.askHarvard:hover
 }
 
 /* selected link */
-a.askHarvard:active
+#ask:active
  {
     font-weight: bold;
     color: #02406A;
@@ -240,7 +250,8 @@ a.askHarvard:active
     outline-color: #02406A;
 }
 
-a.askHarvard:link span
+/* unvisited link */
+#ask:link span
 {
     font-weight: bold;
     color: #527827;
@@ -249,7 +260,7 @@ a.askHarvard:link span
 }
 
 /* visited link */
-a.askHarvard:visited span
+#ask:visited span
 {
     font-weight: bold;
     color: #52C027;
@@ -258,7 +269,7 @@ a.askHarvard:visited span
 }
 
 /* mouse over link */
-a.askHarvard:hover span
+#ask:hover span
 {
     font-weight: bold;
     color: #52C027;
@@ -271,7 +282,7 @@ a.askHarvard:hover span
 }
 
 /* selected link */
-a.askHarvard:active span
+#ask:active span
  {
     font-weight: bold;
     color: #02406A;
