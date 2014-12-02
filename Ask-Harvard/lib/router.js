@@ -8,7 +8,7 @@ Router.configure({
   // redirects to notFound.html if user eters invalid url
   notFoundTemplate: 'notFound',
   // allows client to obtain data from the main database
-  waitOn: function() { return Meteor.subscribe('Tasks'); }
+  waitOn: function() { return [Meteor.subscribe('Tasks'), Meteor.subscribe('Comments')];}
 });
 
 Router.route('/', {name: 'homepage'});
