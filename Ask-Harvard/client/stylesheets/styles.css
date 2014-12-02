@@ -12,7 +12,7 @@ body
   background-color: #315481;
   background-image: url("/img/gate.png");
   background-attachment: fixed;
-
+  background-size: cover;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -37,11 +37,13 @@ body
 /* Style for askHarvard header */
 header 
 {
-  background: #d2edf4;
-  background-image: linear-gradient(to bottom, #d0edf5, #e1e5f0 100%);
   padding: 20px 15px 15px 15px;
   position: relative;
+  background: #d2edf4;
+  background-color: #02406A;
+  height: 42px;
   border-bottom: 1px solid #000;
+  border-radius: 2px;
 }
 
 #login-buttons 
@@ -51,9 +53,10 @@ header
 
 h1 
 {
-  font-family:Palatino Linotype;
-  font-size: 2em;
-  margin: 0;
+  font-family: Calibri;
+  font-style: italic;
+  font-size: 3em;
+  margin: -20px 0px;
   margin-bottom: 10px;
   display: inline-block;
   margin-right: 1em;
@@ -188,6 +191,12 @@ header .hide-completed
   }
 }
 
+.askHarvard
+{
+  display: inline-block;
+  float: right;
+}
+
 /* Styling for links */
 
 /* askHarvard main link */
@@ -195,32 +204,79 @@ header .hide-completed
 a.askHarvard:link 
 {
     font-weight: bold;
-    color: #B0171F;
+    color: #fff;
     text-decoration: none;
+    outline-color: #02406A;
 }
 
 /* visited link */
 a.askHarvard:visited 
 {
     font-weight: bold;
-    color: #B0171F;
+    color: #fff;
     text-decoration: none;
+    outline-color: #02406A;
 }
 
 /* mouse over link */
 a.askHarvard:hover 
 {
     font-weight: bold;
-    color: #B0171F;
+    color: #fff;
     text-decoration: none;
+    -webkit-stroke-width: 6px;
+    -webkit-stroke-color: #FFFFFF;
+    -webkit-fill-color: #FFFFFF;
+    text-shadow: 1px 0px 20px white;
+    outline-color: #02406A;
 }
 
 /* selected link */
 a.askHarvard:active
  {
     font-weight: bold;
-    color: #B0171F;
+    color: #02406A;
     text-decoration: none;
+    outline-color: #02406A;
+}
+
+a.askHarvard:link span
+{
+    font-weight: bold;
+    color: #527827;
+    text-decoration: none;
+    outline-color: #02406A;
+}
+
+/* visited link */
+a.askHarvard:visited span
+{
+    font-weight: bold;
+    color: #52C027;
+    text-decoration: none;
+    outline-color: #02406A;
+}
+
+/* mouse over link */
+a.askHarvard:hover span
+{
+    font-weight: bold;
+    color: #52C027;
+    text-decoration: none;
+    -webkit-stroke-width: 8px;
+    -webkit-stroke-color: #ff0000;
+    -webkit-fill-color: #ff0000;
+    text-shadow: 1px 0px 20px green;
+    outline-color: #02406A;
+}
+
+/* selected link */
+a.askHarvard:active span
+ {
+    font-weight: bold;
+    color: #02406A;
+    text-decoration: none;
+    outline-color: #02406A;
 }
 
 /* Regular links */
@@ -249,7 +305,7 @@ a:hover
 }
 
 /* selected link */
-a.askHarvard:active 
+a:active 
 {
     font-weight: normal;
     color: #B0171F;
