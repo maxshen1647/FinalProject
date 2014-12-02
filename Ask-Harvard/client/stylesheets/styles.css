@@ -191,7 +191,7 @@ header .hide-completed
   }
 }
 
-.askHarvard
+.head_top
 {
   display: inline-block;
   float: right;
@@ -201,7 +201,7 @@ header .hide-completed
 
 /* askHarvard main link */
 /* unvisited link */
-a.askHarvard:link 
+#ask_harvard a:link 
 {
     font-weight: bold;
     color: #fff;
@@ -210,7 +210,7 @@ a.askHarvard:link
 }
 
 /* visited link */
-a.askHarvard:visited 
+#ask_harvard a:visited 
 {
     font-weight: bold;
     color: #fff;
@@ -219,7 +219,7 @@ a.askHarvard:visited
 }
 
 /* mouse over link */
-a.askHarvard:hover 
+#ask_harvard a:hover 
 {
     font-weight: bold;
     color: #fff;
@@ -232,7 +232,7 @@ a.askHarvard:hover
 }
 
 /* selected link */
-a.askHarvard:active
+#ask_harvard a:active
  {
     font-weight: bold;
     color: #02406A;
@@ -240,7 +240,7 @@ a.askHarvard:active
     outline-color: #02406A;
 }
 
-a.askHarvard:link span
+#ask_harvard a:link span
 {
     font-weight: bold;
     color: #527827;
@@ -249,7 +249,7 @@ a.askHarvard:link span
 }
 
 /* visited link */
-a.askHarvard:visited span
+#ask_harvard a:visited span
 {
     font-weight: bold;
     color: #52C027;
@@ -258,7 +258,7 @@ a.askHarvard:visited span
 }
 
 /* mouse over link */
-a.askHarvard:hover span
+#ask_harvard a:hover span
 {
     font-weight: bold;
     color: #52C027;
@@ -271,7 +271,7 @@ a.askHarvard:hover span
 }
 
 /* selected link */
-a.askHarvard:active span
+#ask_harvard a:active span
  {
     font-weight: bold;
     color: #02406A;
