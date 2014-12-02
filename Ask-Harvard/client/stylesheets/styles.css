@@ -42,7 +42,7 @@ header
   padding: 20px 15px 15px 15px;
   position: relative;
   background: #d2edf4;
-  background-color: #02406A;
+  background-color: #70171F;
   height: 42px;
   border-bottom: 1px solid #000;
   border-radius: 2px;
@@ -283,7 +283,7 @@ header .hide-completed
 #ask:visited span
 {
     font-weight: bold;
-    color: #52C027;
+    color: #EF171F;
     text-decoration: none;
     outline-color: #02406A;
 }
