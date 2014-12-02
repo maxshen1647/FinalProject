@@ -58,6 +58,12 @@ header
   font-family: Calibri;
   font-size: 20px;
   margin: -6px -1px;
+  text-decoration: none;
+}
+
+#login-sign-in-link:hover 
+{
+    color: #fff;
 }
 
 /* Styling for header 1 */
