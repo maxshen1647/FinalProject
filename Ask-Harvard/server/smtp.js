@@ -45,7 +45,7 @@ Meteor.startup(function() {
 Accounts.validateLoginAttempt(function(attempt){
   if (attempt.user && attempt.user.emails && !attempt.user.emails[0].verified ) {
     console.log('email not verified');
-    alert('Your account has not been verified yet, we sent you an e-mail.');
+    throw new Meteor.Error(100002, "Please click the verification link sent to you" );
     return false; // the login is aborted
   }
   return true;
