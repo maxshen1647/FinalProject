@@ -1,13 +1,22 @@
 <template name="layout">
-
-  <div class="container">
+	<body class="top-banner">
+		<div id="top-menu">
+			<div id="menu-top">
+				<a id="link-main" href='/'>Main</a>
+				<a id="logo" href='/homepage'>ask<span>Harvard</span></a>
+				<a id="link-login">{{> loginButtons}}</a>
+			</div>
+			<div id="counter-top-right">{{questionsCount}} Questions Asked</div>
+		</div>
+	</body>
+ <!--  <div class="container">
     <header>
       <h1><a id="ask" class="ask-harvard" href='/'>ask<span>Harvard</span></a></h1>
-      <h2 id="questions-asked">{{questionsCount}} questions asked. {{answersCount}} total answers.</h2>
+      <h2 id="questions-asked">{{questionsCount}} questions asked</h2>
       <strong><a id="login-buttons" class="ask-harvard">{{> loginButtons}}</a></strong>
     </header>
 
       {{>yield}}
-  </div>
+  </div> -->
 
 </template>

@@ -1,393 +1,193 @@
 /**
  * styles.css
  *
- * Computer Science 50
+ * CS50 Final Project
  *
  * Global CSS.
  */
 
-/* Styling for main body */
-body 
+/* Styling for Main Body */
+body
+{ 
+  line-height: 20px;
+  color: #222;
+  font-size: 1.4rem;
+  font-family: "Calibri","Helvetica Neue", Arial,Helvetica,sans-serif;
+}
+
+/* Base styling for top banner */
+.top-banner
 {
-  font-family: sans-serif;
-  background-color: #315481;
-  background-image: url('/img/gate.png');
-  background-attachment: fixed;
-  background-size: cover; /* Standard syntax */
-  background-size: -webkit-cover; /* Safari and Chrome */
-  background-size: -moz-cover; /* Mozilla */
-  background-size: -o-cover; /* Opera */
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 14px;
+  text-align: left;
+  color: #000;
+}
+
+/* Styling for elements in top banner */
+.top-banner #top-menu
+{
+  width: 100%;
+  height: 8%;
   position: absolute;
   top: 0px;
-  bottom: 0px;
-  left: 0px;
+  left: 0%;
   right: 0px;
-  padding: 0px;
-  margin: 0px;
-  font-size: 14px;
+  background: -moz-linear-gradient(center top , #027EAF, #023E6F); /* Mozilla support */
+  background: -webkit-linear-gradient(center top , #903000, #500000); /* Chrome and Safari support */
+  background: -o-linear-gradient(center top , #903000, #500000); /* Opera support */
+  background: linear-gradient(center top , #903000, #500000); /* Standard support */
+  background-position: 50% 50%;
 }
 
-/* Width and height of container */
-.container 
-{
-
-  max-width: 800px;
-  margin: 6px auto;
-  min-height: 100%;
-  background: none repeat scroll 0% 0% #FFF;
-  box-shadow: 2px 2px 14px 3px #000;
-
-}
-
-/* Style for askHarvard header */
-header 
-{
-  padding: 20px 15px 15px 15px;
-  position: relative;
-  background: linear-gradient(to top , #6F6F6F, #000); /* Standard syntax */
-  background: -webkit-linear-gradient(to top , #6F6F6F, #000); /* Safari and Chrome */
-  background: -moz-linear-gradient(to top , #6F6F6F, #000); /* Mozilla */
-  background: -o-linear-gradient(to top , #6F6F6F, #000); /* Opera */
-  background-size: 100%;
-  height: 42px;
-  border-bottom: 1px solid #000;
-  border-radius: 2px;
-  /*box-shadow: 2px 2px 12px 3px #000;*/
-}
-
-/* Styling for login button */
-#login-buttons 
+/* Base style for text in banner */
+#menu-top
 {
   display: block;
+  position: relative;
+  width: 716px;
+  height: 42px;
+  margin: 0px auto;
+  padding: 0px 17px 0px 0px;
+}
+
+/* Styling for sign in button */
+a#link-login
+{
+  display: block;
+  min-width: 52px;
   float: right;
-  color: #fff;
-  font-weight: bold;
-  font-family: Calibri;
-  font-size: 20px;
-  margin: -6px -1px;
+  margin: -29px 0px 0px 10px;
+  padding: 4px 10px 4px;
+  font-size: 14px;
+  line-height: 14px;
+  background: none repeat scroll 0% 0% #023E6F;
+  border: 1px solid #19314A;
+  color: #FFF;
+  border-radius: 5px;
+  text-align: center;
   text-decoration: none;
 }
 
-/* Styling for sign in button on top of main page */
-#login-sign-in-link:hover 
+/* Styling for on-hover sign in button */
+a#link-login:hover 
 {
-    color: #fff;
+  background: #027EAF;
 }
 
-/* Styling for askHarvard (header1) */
-h1 
+/* Styling for Ask Harvard Logo */
+a#logo
 {
+  display: block;
+  margin: 2px 200px;
+  text-align: center;
+  border: 0px none;
   font-family: Calibri;
   font-style: italic;
-  font-size: 3em;
-  margin: -20px 0px;
-  margin-bottom: 10px;
-  display: inline-block;
-  margin-right: 1em;
-  color: #B0171F;
-}
-
-/* Styling for # questions asked */
-h2 
-{
-  font-size: 1em;
-  margin: 0;
-  margin-bottom: 10px;
-  display: inline-block;
-  margin-right: 1em;
-}
-
-/* Style for questions asked */
-#questions-asked
-{
-  position: absolute;
-  left: 17px;
-  top: 48px;
-  text-align: left;
-  font-family: Calibri;
-  font-size: 16px;
-  color: #fff;
-}
-
-/* Style for question display form */
-form 
-{
-  margin-top: 0px;
-  margin-bottom: -10px;
-  position: relative;
-  text-align: center;
-}
-
-/* Style for question box */
-.new-task input 
-{
-  box-sizing: border-box;
-  padding: 15px 10px;
-  background: transparent;
-  border: none;
-  width: 100%;
-  padding-right: 80px;
-  font-size: 1em;
-  background: linear-gradient(to bottom, #d0edf5, #e1e5f0); /* Standard Syntax */
-  background: -webkit-linear-gradient(to bottom, #d0edf5, #e1e5f0); /* Safari and Chrome */
-  background: -moz-linear-gradient(to bottom, #d0edf5, #e1e5f0); /* Mozilla */
-  background: -o-linear-gradient(to bottom, #d0edf5, #e1e5f0); /* Opera */
-  border-bottom: 1px solid #000;
-}
-
-.new-task input:focus
-{
-  outline: 0;
-}
-
-
-/* Style for Ask Button */
-#submit
-{
-cursor: pointer;
-border: 1px solid #A0171F;
-font-family: Calibri;
-font-style: italic;
-color: #fff;
-width: 30px;
-font-weight: bold;
-padding: 0px;
-width: 140px;
-text-align: center;
-display: block;
-margin: 5px 40%;
-font-size: 25px;
-border-radius: 5px;
-box-shadow: 0 1px 3px #101010;
-text-shadow: 1px 1px 1px #303030;
-background: linear-gradient(to bottom, #D82D2D, #60171F); /* Standard Syntax */
-background: -webkit-linear-gradient(to bottom, #D82D2D, #60171F); /* Safari and Chrome */
-background: -moz-linear-gradient(to bottom, #D82D2D, #60171F); /* Mozilla */
-background: -o-linear-gradient(to bottom, #D82D2D, #60171F); /* Opera */
-}
-
-#submit:hover {
-  background: linear-gradient(to bottom, #F82D2D, #90171F); /* Standard Syntax */
-  background: -webkit-linear-gradient(to bottom, #F82D2D, #90171F); /* Safari and Chrome */
-  background: -moz-linear-gradient(to bottom, #F82D2D, #90171F); /* Mozilla */
-  background: -o-linear-gradient(to bottom, #F82D2D, #90171F); /* Opera */
-}
-
-#submit:active {
-  vertical-align: top;
-}
-
-ul 
-{
-  margin: 0;
-  padding: 0;
-  background: white;
-  word-wrap: break-word;
-}
-
-.delete 
-{
-  float: right;
   font-weight: bold;
-  background: none;
-  font-size: 1em;
-  border: none;
-  position: relative;
+  text-decoration: none;
+  font-size: 28px;
+  color: #FFFFFF;
+  padding: 4px 10px 4px;
+  border: 1px solid #19314A;
+  border-radius: 5px;
+  background: -webkit-linear-gradient(center, #023E6F, #027EAF); /* Safari and Chrome support */
+  background: -moz-linear-gradient(bottom center, #023E6F, #027EAF); /* Mozilla support */
+  background: -o-linear-gradient(center, #023E6F, #027EAF); /* Operasupport */
+  background: linear-gradient(center, #023E6F, #027EAF); /* Standard support */
 }
-
-li 
+a#logo span
 {
-  position: relative;
-  list-style: none;
-  padding: 15px;
-  border-bottom: #eee solid 1px;
+  color: #66CD00;
 }
 
-li .text 
+/* Styling for on hover Ask Harvard Logo */
+a#logo:hover
 {
-  margin-left: 10px;
+  background-position: center bottom;
+  -webkit-stroke-width: 6px; /* Chrome and Safari support */
+  -webkit-stroke-color: #FFFFFF; /* Chrome and Safari support */
+  -webkit-fill-color: #FFFFFF; /* Chrome and Safari support */
+  -moz-stroke-width: 6px; /* Mozilla support */
+  -moz-stroke-color: #FFFFFF; /* Mozilla support */
+  -moz-fill-color: #FFFFFF; /* Mozilla support */
+  -o-stroke-width: 6px; /* Opera support */
+  -o-stroke-color: #FFFFFF; /* Opera support */
+  -o-fill-color: #FFFFFF; /* Opera support */
+  stroke-width: 6px; /* Standard support */
+  stroke-color: #FFFFFF; /* Standard support */
+  fill-color: #FFFFFF; /* Standard support */
+  text-shadow: 1px 0px 20px #FFFFFF;
+  color: #FFFFFF;
+  background: #025E8F;
 }
-
-li .signature
+a#logo:hover span
 {
-  margin-left: 10px;
+  background-position: center bottom;
+  -webkit-stroke-width: 6px; /* Chrome and Safari support */
+  -webkit-stroke-color: #FFFFFF; /* Chrome and Safari support */
+  -webkit-fill-color: #FFFFFF; /* Chrome and Safari support */
+  -moz-stroke-width: 6px; /* Mozilla support */
+  -moz-stroke-color: #FFFFFF; /* Mozilla support */
+  -moz-fill-color: #FFFFFF; /* Mozilla support */
+  -o-stroke-width: 6px; /* Opera support */
+  -o-stroke-color: #FFFFFF; /* Opera support */
+  -o-fill-color: #FFFFFF; /* Opera support */
+  stroke-width: 6px; /* Standard support */
+  stroke-color: #FFFFFF; /* Standard support */
+  fill-color: #FFFFFF; /* Standard support */
+  text-shadow: 1px 0px 20px #FFFFFF;
+  color: #FFFFFF;
+  color: #76EE00;
 }
 
-li .private 
+/* Styling for Main link */
+a#link-main
 {
-  background: #eee;
-  border-color: #ddd;
+  float: left;
+  min-width: 52px;
+  margin: 3px 0px 0px 0px;
+  padding: 6px 10px 4px;
+  text-align: right;
+  font-size: 14px;
+  line-height: 14px;
+  background: none repeat scroll 0% 0% #023E6F;
+  border: 1px solid #19314A;
+  color: #FFF;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
 }
 
-#ask-anonymously
+/* Styling for on hover Main link */
+a#link-main:hover
 {
-  display: inline-block;
-  margin-right: 10px;
+  background-color: #027EAF;
 }
 
-.hide-completed
+/* Styling for # question tracker */
+#counter-top-right
 {
-  vertical-align: 60%;
-  margin-left: 60%;
-  margin-bottom: 10px;
-  margin-top: -10px;
-}
-
-
-@media (max-width: 600px) {
-  li {
-    padding: 12px 15px;
-  }
-
-  .search 
-  {
-    width: 150px;
-    clear: both;
-  }
-
-  .new-task input 
-  {
-    display: inline-block;
-  }
-}
-
-/* Styling for the ASK box */
-#ask-box
-{
-  background: linear-gradient(to right, #D2EEFF, #428EAF); /* Standard Syntax */
-  background: -webkit-linear-gradient(to right, #D2EEFF, #428EAF); /* Chrome and Safari support */
-  background: -moz-linear-gradient(to right, #D2EEFF, #428EAF); /* Mozilla support */
-  background: -o-linear-gradient(to right, #D2EEFF, #428EAF); /* Opera support */
-  color: #000;
-  font-size: 16px;
-
-}
-
-.ask-harvard
-{
-  display: inline-block;
   float: right;
+  display: block;
+  position: relative;
+  width: 326px;
+  margin: -47px auto;
+  padding: 10px 17px 0px 0px;
+  color: #FFF;
+  font-family: Calibri;
+  font-style: italic;
+  font-weight: bold;
 }
 
-/* Styling for links */
-
-/* Specific styling for Ask Harvard Link*/
-/* unvisited link */
-#ask:link 
+.page-main #main-bg
 {
-    font-weight: bold;
-    color: #fff;
-    text-decoration: none;
-    outline-color: #02406A;
+  width: 100%;
+  height: 280px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  background: #517FA4;
 }
 
-/* visited link */
-#ask:visited 
-{
-    font-weight: bold;
-    color: #fff;
-    text-decoration: none;
-    outline-color: #02406A;
-}
-
-/* mouse over link */
-#ask:hover 
-{
-    font-weight: bold;
-    color: #fff;
-    text-decoration: none;
-    -webkit-stroke-width: 6px;
-    -webkit-stroke-color: #FFFFFF;
-    -webkit-fill-color: #FFFFFF;
-    -moz-stroke-width: 6px;
-    -moz-stroke-color: #FFFFFF;
-    -moz-fill-color: #FFFFFF;
-    text-shadow: 1px 0px 20px white;
-    outline-color: #02406A;
-}
-
-/* selected link */
-#ask:active
- {
-    font-weight: bold;
-    color: #02406A;
-    text-decoration: none;
-    outline-color: #02406A;
-}
-
-/* unvisited link */
-#ask:link span
-{
-    font-weight: bold;
-    color: #F82D2D;
-    text-decoration: none;
-    outline-color: #02406A;
-}
-
-/* visited link */
-#ask:visited span
-{
-    font-weight: bold;
-    color: #DA171F;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    text-decoration: none;
-    outline-color: #02406A;
-}
-
-/* mouse over link */
-#ask:hover span
-{
-    font-weight: bold;
-    color: #F82D2D;
-    text-decoration: none;
-    -webkit-stroke-width: 8px;
-    -webkit-stroke-color: #ff0000;
-    -webkit-fill-color: #ff0000;
-    -moz-stroke-width: 8px;
-    -moz-stroke-color: #ff0000;
-    -moz-fill-color: #ff0000;
-    text-shadow: 1px 0px 20px #F82D2D;
-    outline-color: #02406A;
-}
-
-/* selected link */
-#ask:active span
- {
-    font-weight: bold;
-    color: #F82D2D;
-    text-decoration: none;
-    outline-color: #02406A;
-}
-
-/* Regular links */
-/* unvisited link */
-a:link 
-{
-    font-weight: bold;
-    color: #3b5998;
-    text-decoration: none;
-}
-
-/* visited link */
-a:visited 
-{
-    font-weight: normal;
-    color: #B0171F;
-    text-decoration: none;
-}
-
-/* mouse over link */
-a:hover 
-{
-    font-weight: normal;
-    color: #CD3700;
-    text-decoration: none;
-}
-
-/* selected link */
-a:active 
-{
-    font-weight: normal;
-    color: #B0171F;
-    text-decoration: none;
-}
