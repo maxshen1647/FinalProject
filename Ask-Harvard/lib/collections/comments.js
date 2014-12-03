@@ -9,7 +9,7 @@ Meteor.methods({
 			body: String    
 		});    
 		var user = Meteor.user();    
-		var post = Posts.findOne(commentAttributes.postId);    
+		var post = Tasks.findOne(commentAttributes.postId);    
 		if (!post)      
 			alert('invalid-comment', 'You must comment on a post');    
 		comment = _.extend(commentAttributes, {      

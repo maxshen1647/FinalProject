@@ -8,7 +8,10 @@ Template.layout.helpers({
     //returns number of questions in database
     questionsCount: function () {
       return Tasks.find().count();
-    }   
+    },   
+    answersCount: function () {
+    return Comments.find().count();
+    }
   });
 
 // verification popup if homepage is induced by verification link
