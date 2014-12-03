@@ -2,6 +2,7 @@
 Template.task.events({
   "click .delete": function () {
     Tasks.remove(this._id);
+    Comments.remove({postId: this._id}); //doesnt work !?!?!
   }
 });
 

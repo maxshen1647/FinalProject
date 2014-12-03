@@ -1,6 +1,13 @@
 // Start new mongo database for comments
 Comments = new Mongo.Collection('comments');
 
+Comments.allow({  
+  remove: function(userId, doc) {    
+  // only allow deleting if you are logged in    
+    return !! userId;
+  }
+});
+
 Meteor.methods({  
 	commentInsert: function(commentAttributes) {    
 		check(this.userId, String);    
