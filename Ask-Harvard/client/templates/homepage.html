@@ -1,14 +1,13 @@
 <template name="homepage">
       <form class="new-task">
-        <input type="text" name="text" placeholder="Ask us a question!" />
-        <input type="submit" id="submit" value="Ask">
+        <input id="ask-box" type="text" name="text" placeholder="Ask us a question!" />
+        <input class="ask-anonymously" id="submit" type="submit" value="ask">
       </form>
       
       <label class="hide-completed">
-        <input type="checkbox" checked="{{hideCompleted}}" />
-        Ask anonymously
+        <input class="ask-anonymously" type="checkbox" checked="{{hideCompleted}}" />
+        Anonymous Inquiry
       </label>
-
     <ul>
       {{#each tasks}}
         {{> task}}

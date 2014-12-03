@@ -13,7 +13,10 @@ body
   background-color: #315481;
   background-image: url('/img/gate.png');
   background-attachment: fixed;
-  background-size: cover;
+  background-size: cover; /* Standard syntax */
+  background-size: -webkit-cover; /* Safari and Chrome */
+  background-size: -moz-cover; /* Mozilla */
+  background-size: -o-cover; /* Opera */
   position: absolute;
   top: 0px;
   bottom: 0px;
@@ -41,7 +44,10 @@ header
 {
   padding: 20px 15px 15px 15px;
   position: relative;
-  background: -moz-linear-gradient(to top , #6F6F6F, #000);
+  background: linear-gradient(to top , #6F6F6F, #000); /* Standard syntax */
+  background: -webkit-linear-gradient(to top , #6F6F6F, #000); /* Safari and Chrome */
+  background: -moz-linear-gradient(to top , #6F6F6F, #000); /* Mozilla */
+  background: -o-linear-gradient(to top , #6F6F6F, #000); /* Opera */
   background-size: 100%;
   height: 42px;
   border-bottom: 1px solid #000;
@@ -91,6 +97,7 @@ h2
   margin-right: 1em;
 }
 
+/* Style for questions asked */
 #questions-asked
 {
   position: absolute;
@@ -121,7 +128,10 @@ form
   width: 100%;
   padding-right: 80px;
   font-size: 1em;
-  background: linear-gradient(to bottom, #d0edf5, #e1e5f0 100%);
+  background: linear-gradient(to bottom, #d0edf5, #e1e5f0); /* Standard Syntax */
+  background: -webkit-linear-gradient(to bottom, #d0edf5, #e1e5f0); /* Safari and Chrome */
+  background: -moz-linear-gradient(to bottom, #d0edf5, #e1e5f0); /* Mozilla */
+  background: -o-linear-gradient(to bottom, #d0edf5, #e1e5f0); /* Opera */
   border-bottom: 1px solid #000;
 }
 
@@ -135,22 +145,36 @@ form
 #submit
 {
 cursor: pointer;
-padding: 1px 4px;
-font-size: 150%;
-font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-margin-top: 5px;
-line-height: 1.1;
+border: 1px solid #A0171F;
+font-family: Calibri;
+font-style: italic;
+color: #fff;
+width: 30px;
+font-weight: bold;
+padding: 0px;
+width: 140px;
 text-align: center;
-color: #FFF;
-text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-background: none repeat scroll 0% 0% #B0171F;
-border: 1px solid #464F75;
-border-radius: 8px;
-width: 160px;
+display: block;
+margin: 5px 40%;
+font-size: 25px;
+border-radius: 5px;
+box-shadow: 0 1px 3px #101010;
+text-shadow: 1px 1px 1px #303030;
+background: linear-gradient(to bottom, #D82D2D, #60171F); /* Standard Syntax */
+background: -webkit-linear-gradient(to bottom, #D82D2D, #60171F); /* Safari and Chrome */
+background: -moz-linear-gradient(to bottom, #D82D2D, #60171F); /* Mozilla */
+background: -o-linear-gradient(to bottom, #D82D2D, #60171F); /* Opera */
 }
 
 #submit:hover {
-  background: #cc3000;
+  background: linear-gradient(to bottom, #F82D2D, #90171F); /* Standard Syntax */
+  background: -webkit-linear-gradient(to bottom, #F82D2D, #90171F); /* Safari and Chrome */
+  background: -moz-linear-gradient(to bottom, #F82D2D, #90171F); /* Mozilla */
+  background: -o-linear-gradient(to bottom, #F82D2D, #90171F); /* Opera */
+}
+
+#submit:active {
+  vertical-align: top;
 }
 
 ul 
@@ -195,15 +219,20 @@ li .private
   border-color: #ddd;
 }
 
-header .hide-completed 
+#ask-anonymously
 {
-  float: right;
+  display: inline-block;
+  margin-right: 10px;
 }
 
-.toggle-private 
+.hide-completed
 {
-  margin-left: 5px;
+  vertical-align: 60%;
+  margin-left: 60%;
+  margin-bottom: 10px;
+  margin-top: -10px;
 }
+
 
 @media (max-width: 600px) {
   li {
@@ -218,8 +247,20 @@ header .hide-completed
 
   .new-task input 
   {
-    padding-bottom: 5px;
+    display: inline-block;
   }
+}
+
+/* Styling for the ASK box */
+#ask-box
+{
+  background: linear-gradient(to right, #D2EEFF, #428EAF); /* Standard Syntax */
+  background: -webkit-linear-gradient(to right, #D2EEFF, #428EAF); /* Chrome and Safari support */
+  background: -moz-linear-gradient(to right, #D2EEFF, #428EAF); /* Mozilla support */
+  background: -o-linear-gradient(to right, #D2EEFF, #428EAF); /* Opera support */
+  color: #000;
+  font-size: 16px;
+
 }
 
 .ask-harvard
@@ -258,6 +299,9 @@ header .hide-completed
     -webkit-stroke-width: 6px;
     -webkit-stroke-color: #FFFFFF;
     -webkit-fill-color: #FFFFFF;
+    -moz-stroke-width: 6px;
+    -moz-stroke-color: #FFFFFF;
+    -moz-fill-color: #FFFFFF;
     text-shadow: 1px 0px 20px white;
     outline-color: #02406A;
 }
@@ -284,7 +328,7 @@ header .hide-completed
 #ask:visited span
 {
     font-weight: bold;
-    color: #F82D2D;
+    color: #DA171F;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     text-decoration: none;
     outline-color: #02406A;
@@ -299,6 +343,9 @@ header .hide-completed
     -webkit-stroke-width: 8px;
     -webkit-stroke-color: #ff0000;
     -webkit-fill-color: #ff0000;
+    -moz-stroke-width: 8px;
+    -moz-stroke-color: #ff0000;
+    -moz-fill-color: #ff0000;
     text-shadow: 1px 0px 20px #F82D2D;
     outline-color: #02406A;
 }
