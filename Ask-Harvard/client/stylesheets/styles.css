@@ -180,7 +180,7 @@ a#link-main:hover
   font-weight: bold;
 }
 
-.page-main #main-bg
+/*.page-main #main-bg
 {
   width: 100%;
   height: 280px;
@@ -189,5 +189,5 @@ a#link-main:hover
   left: 0px;
   right: 0px;
   background: #517FA4;
-}
+}*/
 
