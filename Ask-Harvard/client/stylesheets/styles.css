@@ -243,7 +243,7 @@ a#link-main:active
   min-width: 320px;
 }
 
-.page
+.page-in-root
 {
   min-height: 600px;
 }
@@ -253,7 +253,7 @@ a#link-main:active
   padding-bottom: 0px;
 }
 
-#home-bg
+#main-bg
 {
   z-index: 50;
   width: 100%;
