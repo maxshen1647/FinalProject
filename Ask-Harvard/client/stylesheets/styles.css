@@ -259,7 +259,7 @@ a#link-main:active
   top: -5px;
   left: 0px;
   right: 0px;
-  background-image: url("/img/john-harvard.png");
+  background-image: url("/img/john-harvard.jpg");
   background-position: 50% 40px;
   background-size: cover;
 }
