@@ -12,6 +12,7 @@ Template.commentSubmit.helpers({
 });
 
 Template.commentSubmit.events({
+   // acquire user inputs and put into the comment variable when form is submitted
   'submit form': function(e, template) {
     e.preventDefault();
 
@@ -26,7 +27,7 @@ Template.commentSubmit.events({
       errors.body = "Please write some content";
       return Session.set('commentSubmitErrors', errors);
     }
-
+    // call the method commentInsert (defined server side), which insert the comment into database
     Meteor.call('commentInsert', comment, function(error, commentId) {
       if (error){
         throwError(error.reason);

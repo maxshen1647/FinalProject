@@ -4,7 +4,7 @@ Template.homepage.helpers({
       // return all of the tasks
       return Tasks.find({}, {sort: {createdAt: -1}});
     },
-
+    // returns the status of the anon inquiry checkbox
     hideCompleted: function () {
       return Session.get("hideCompleted");
     }
@@ -12,8 +12,8 @@ Template.homepage.helpers({
 
   // events that happen in homepage.html
   Template.homepage.events({
+     // This function is called when the new task form is submitted
     "submit .new-task": function (event) {
-      // This function is called when the new task form is submitted
       var text = event.target.text.value;
 
       //check for blank input
@@ -21,6 +21,7 @@ Template.homepage.helpers({
         return false;
 
       // if not logged in, display alert. if anon box is checked, do not acquire username
+      // insert question into database
       if (Meteor.user() == null){
       alert('Please sign in or register first. Thanks!');
       } else if (Session.get("hideCompleted")){
@@ -44,6 +45,7 @@ Template.homepage.helpers({
       // Prevent default form submit
       return false;
     },
+    // when anonymous box is is checked/unchecked, change the session variable
     "change .hide-completed input": function (event) {
       Session.set("hideCompleted", event.target.checked);
     }

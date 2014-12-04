@@ -3,12 +3,13 @@ Accounts.ui.config({
     passwordSignupFields: "USERNAME_AND_EMAIL"
   });
 
-//functions that do work on the layout.html
+// functions that do work on the layout.html
 Template.layout.helpers({
-    //returns number of questions in database
+    // returns number of questions in database
     questionsCount: function () {
       return Tasks.find().count();
     },   
+    // returns number of comments in database
     answersCount: function () {
     return Comments.find().count();
     }
