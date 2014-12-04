@@ -2,8 +2,9 @@
   <li>
     <h4>
       <span class="author">{{author}}</span>
-      <span class="date">on {{timestamp}}</span>
+      <span class="date">on {{timestamp}} {{votes}} Votes</span>
       {{#if ownComment}}<button class="delete">&times;</button>{{/if}}
+      <a href="#" class="upvote btn btn-default">⬆</a>
     </h4>
     <p>{{body}}</p>
   </li>

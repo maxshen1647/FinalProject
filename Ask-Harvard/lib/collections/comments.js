@@ -20,12 +20,31 @@ Meteor.methods({
 		var user = Meteor.user();    
 		var post = Tasks.findOne(commentAttributes.postId);    
 		if (!post)      
-			alert('invalid-comment', 'You must comment on a post');    
+			alert('You must answer a question');    
 		comment = _.extend(commentAttributes, {      
 			userId: user._id,      
 			author: user.username,      
-			submitted: new Date()    
+			submitted: new Date(),
+			upvoters: [],
+			votes: 0    
 		});    
 		return Comments.insert(comment);  
-	}
+	},
+
+	upvote: function(postId) {
+		check(this.userId, String);
+		check(postId, String);
+
+		var comment = Comments.findOne(postId);
+		if (!comment)
+			alert('Answer not found');
+
+		if (_.include(comment.upvoters, this.userId))
+			alert('Already upvoted this answer');
+
+		Comments.update(comment._id, {
+			$addToSet: {upvoters: this.userId},
+			$inc: {votes: 1}
+		});
+	}	
 });
