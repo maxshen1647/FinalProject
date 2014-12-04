@@ -5,7 +5,7 @@
     <span class="text">{{text}}</span>
     
     <span class="signature"><strong>{{username}}</strong></span>
-    <a href="{{pathFor 'answerpage'}}" class="discuss btn btn-default">Answer</a>
+    {{#if harvardStudent}}<a href="{{pathFor 'answerpage'}}" class="discuss btn btn-default">Answer</a>{{/if}}
     <a href="{{pathFor 'answerpage'}}">({{commentsCount}} answers)</a>
   </li>
 </template>
