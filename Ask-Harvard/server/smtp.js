@@ -38,9 +38,7 @@ Meteor.startup(function() {
   // Note: if you need to return HTML instead, use Accounts.emailTemplates.verifyEmail.html
   Accounts.emailTemplates.verifyEmail.text = function(user, url) {
     return "Dear " + user.username + ",\n\n" +  
-    "Welcome to askHarvard, Harvard's open Q & A platform to the world. 
-    The website is entirely run by current Harvard undergaduates. Please 
-    click on the following link to verify your email address:\n\n" + url;
+    "Welcome to askHarvard, Harvard's open Q & A platform to the world. The website is entirely run by current Harvard undergaduates. Please click on the following link to verify your email address:\n\n" + url;
   };
 });
 
