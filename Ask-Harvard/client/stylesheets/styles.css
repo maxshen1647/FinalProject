@@ -27,8 +27,9 @@ body
 /* Styling for elements in top banner */
 .top-banner #top-menu
 {
+  z-index: 1000;
   width: 100%;
-  height: 8%;
+  height: 35px;
   position: absolute;
   top: 0px;
   left: 0%;
@@ -38,6 +39,7 @@ body
   background: -o-linear-gradient(center top , #903000, #500000); /* Opera support */
   background: linear-gradient(center top , #903000, #500000); /* Standard support */
   background-position: 50% 50%;
+  box-shadow: 0px 1px 14px 4px #000;
 }
 
 /* Base style for text in banner */
@@ -180,14 +182,58 @@ a#link-main:hover
   font-weight: bold;
 }
 
-/*.page-main #main-bg
+body.page-main
 {
+  text-align: center;
+}
+
+/* Styling for background in Main Page */
+.page #main-bg
+{
+  z-index: 10;
   width: 100%;
-  height: 280px;
+  height: 100%;
   position: absolute;
   top: 0px;
   left: 0px;
   right: 0px;
-  background: #517FA4;
-}*/
+  background: url("/img/gate.png");
+  background-size: -webkit-cover; /* Chrome and Safari support */
+  background-size: -moz-cover;  /* Mozilla support */ 
+  background-size: -o-cover; /* Opera support */
+  background-size: cover; /* Standard support */
+}
+
+/* General styling for content in Main */
+.page-main .content
+{
+  z-index: 50;
+  float: right;
+  position: relative;
+  width: 520px;
+  margin-top: 30px;
+}
+
+/* Styling for Access blue button */
+.page-main .content .main-access
+{
+  z-index: 50;
+  /*background-color: #6F97B6;*/
+  background-color: -webkit-linear-gradient(center top , #6F97B6, #3F729B); /* Chrome and Safari support */
+  background-color: -moz-linear-gradient(center top , #6F97B6, #3F729B); /* Mozilla support */
+  background-color: -o-linear-gradient(center top , #6F97B6, #3F729B); /* Opera support */
+  background-color: linear-gradient(center top , #6F97B6, #3F729B); /* Standard support */
+  background-position: 50% 50%;
+  text-shadow: 0px 1px 1px #1C5380;
+  border: 1px solid #1C5380;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 1px 0px 0px rgba(255, 255, 255, 0.05) inset, -1px 0px 0px rgba(255, 255, 255, 0.05) inset, 0px 1px 0px rgba(255, 255, 255, 0.1) inset;
+  position: absolute;
+  right: 18px;
+  top: 96px;
+  padding: 13px 13px 12px 42px;
+  font-size: 16px;
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.3);
+  }
+
+
 
