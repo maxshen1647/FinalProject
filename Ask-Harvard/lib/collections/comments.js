@@ -32,7 +32,7 @@ Meteor.methods({
 	},
 
 	upvote: function(postId) {
-		check(this.userId, String);
+		check(this.userId, String); // produces error in console
 		check(postId, String);
 
 		var comment = Comments.findOne(postId);
