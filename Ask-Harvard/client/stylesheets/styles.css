@@ -6,6 +6,13 @@
  * Global CSS.
  */
 
+/* PLACEHOLDER */
+#ask-box
+{
+  margin-top: 50px;
+}
+
+
 /* Styling for Main Body */
 body
 { 
@@ -182,10 +189,20 @@ a#link-main:hover
   font-weight: bold;
 }
 
+/* General styling for Main Page body */
 body.page-main
 {
   text-align: center;
 }
+
+/* Styling for the page root */
+.page-root 
+{
+    height: 100%;
+    min-width: 320px;
+}
+
+.
 
 /* Styling for background in Main Page */
 .page #main-bg
@@ -197,13 +214,21 @@ body.page-main
   top: 0px;
   left: 0px;
   right: 0px;
-  background: url("/img/gate.png");
+  /*background: url("/img/gate.png");*/
   background-size: -webkit-cover; /* Chrome and Safari support */
   background-size: -moz-cover;  /* Mozilla support */ 
   background-size: -o-cover; /* Opera support */
   background-size: cover; /* Standard support */
 }
 
+/* Page styling for wrapping around text */
+.page-main .wrap
+{
+  z-index: 50;
+  position: relative;
+  width: 880px;
+  margin: 0px auto;
+}
 /* General styling for content in Main */
 .page-main .content
 {
