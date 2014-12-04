@@ -10,7 +10,7 @@ Template.task.events({
 Template.task.helpers({
   // checks whether post belongs to the current user
   ownPost: function(){
-    return this.owner === Meteor.userId();
+    return this.userId === Meteor.userId();
   },
   // counts the number of answers on the current question
   commentsCount: function() {   

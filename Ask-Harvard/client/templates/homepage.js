@@ -28,13 +28,13 @@ Template.homepage.helpers({
         Tasks.insert({
           text: text,
           createdAt: new Date(),
-          owner: Meteor.userId(), // _id of logged in user
+          userId: Meteor.userId(), // _id of logged in user
         });  
       } else {
         Tasks.insert({
           text: text,
           createdAt: new Date(),
-          owner: Meteor.userId(), // _id of logged in user
+          userId: Meteor.userId(), // _id of logged in user
           username: Meteor.user().username // username of logged in user 
         });
       }
