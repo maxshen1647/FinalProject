@@ -243,19 +243,16 @@ a#link-main:active
   min-width: 320px;
 }
 
+/* Adds minimum height to text-page inside Main page */
 .page-in-root
 {
   min-height: 600px;
 }
 
-.margin
-{
-  padding-bottom: 0px;
-}
-
+/* Styling for Main page background */
 #main-bg
 {
-  z-index: 50;
+  z-index: 10;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -267,13 +264,16 @@ a#link-main:active
   background-size: cover;
 }
 
+/* Position and width for text and button wrap in Main page */
 .wrap
 {
+  z-index: 100;
   position: absolute;
   width: 880px;
 
 }
 
+/* Adds margin and position for Ask Now button */
 .content
 {
   float: right;
@@ -282,6 +282,7 @@ a#link-main:active
   margin-top: 30px;
 }
 
+/* Styling for Ask Now button */
 .content .access-homepage
 {
   z-index: 100;
@@ -307,11 +308,13 @@ a#link-main:active
   font-family: "proxima-nova","Helvetica Neue",Arial,Helvetica,sans-serif;
 }
 
+/* Hover styling for Ask Now button */
 .content .access-homepage:hover
 {
   background-color: #EEE;
 }
 
+/* Active styling for Ask Now button */
 .content .access-homepage:active
 {
   border-color: #133856;
@@ -322,13 +325,16 @@ a#link-main:active
   text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.3);
 }
 
+/* Visited styling for Ask Now button */
 .content .access-homepage:visited
 {
   color: rgba(255, 255, 255, 0.8);
 }
 
+/* Add house icon in Ask Now button */
 .content .access-homepage i
 {
+  z-index: 100;
   position: absolute;
   left: 0px;
   top: 0px;
@@ -338,8 +344,48 @@ a#link-main:active
   background: url("/img/shared-assets.png") no-repeat scroll 4px -196px transparent;
 }
 
-h1.askharvard-title
+/* Margins for Ask Harvard title */
+.content .askharvard-title
 {
   z-index: 100;
   position: absolute;
+  top: 40px;
+  left: 10px;
+  width: 314px;
+  height: 78px;
+}
+
+/* Styling for Ask Harvard title in Main page */
+.askharvard-title
+{
+  z-index: 100;
+  position: absolute;
+  color: #3F729B;
+  font-size: 1.8em;
+  line-height: 1em;
+  margin: 40px 0px 20px -1px;
+  font-weight: bold;
+  font-family: "freight-sans-pro","proxima-nova","Helvetica Neue",Arial,Helvetica,sans-serif;
+}
+
+.content .sheet
+{
+  z-index: 100;
+  margin-top: 170px;
+  background: #000;
+  background-image: url("/img/main-text-background.png");
+  background-size: 505px 284px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+}
+
+.content .sheet-content
+{
+  z-index: 100;
+  position: absolute;
+  padding: 40px 56px 128px 48px;
+  height: 100%;
+  width: 100%;
 }
