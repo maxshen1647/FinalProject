@@ -254,13 +254,13 @@ a#link-main:active
 {
   z-index: 10;
   width: 100%;
-  height: 100%;
+  height: 102%;
   position: absolute;
-  top: 0px;
+  top: -5px;
   left: 0px;
   right: 0px;
-  background-image: url("/img/gate.png");
-  background-position: 50% 50%;
+  background-image: url("/img/john-harvard.png");
+  background-position: 50% 40px;
   background-size: cover;
 }
 
@@ -342,5 +342,64 @@ a#link-main:active
   width: 40px;
   height: 40px;
   background: url("/img/shared-assets.png") no-repeat scroll 4px -196px transparent;
+}
+
+#question-form
+{
+  z-index: 50;
+  position: absolute;
+  display: block;
+  width: 99.3%;
+  margin: 0px -16px;
+  height: 80px;
+  top: 26px;
+  padding: 5px;
+  overflow: hidden;
+  background: -webkit-linear-gradient(bottom center, #80070F, #FF5050); /* Chrome and Safari support */
+  background: -moz-linear-gradient(bottom center, #80070F, #FF5050); /* Mozilla support */
+  background: -o-linear-gradient(bottom center, #80070F, #FF5050); /* Opera support */
+  background: linear-gradient(bottom center, #80070F, #FF5050); /* Standard support */
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.question-bar
+{
+  position: absolute;
+  display: inline-block;
+  width: 400px;
+  margin-top: -20px;
+}
+
+#question-title-bar
+{
+  z-index: 200;
+  display: block;
+  position: absolute;
+  top: 23px;
+  left: 15px;
+  font-family: Calibri;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 30px;
+  color: #fff;
+}
+
+#post-options-border
+{
+    display: block;
+    padding-left: 15px;
+    text-indent: -5px;
+}
+
+#question-submit
+{
+    width: 60px;
+    height: 20px;
+    margin: 2px;
+    vertical-align: bottom;
+    position: absolute;
+    top: 50px;
+    *overflow: hidden;
 }
 

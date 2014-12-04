@@ -1,25 +1,26 @@
 <template name="homepage">
-        <body class="page-home">
-        <div class="page-in-home">
-          <div class="main-in-home">
-            <div id="home-bg"></div>
-            <div class="wrap-in-home"></div>
-          </div>
+  <body class="page-home">
+    <form id="question-form">
+      <div class="question-bar">
+        <div id="question-title-bar">
+          <div class="title-headline">Ask a Question</div>
         </div>
-        <form class="new-task">
-        <input id="ask-box" type="text" name="text" placeholder="Ask us a question!" />
-        <input class="ask-anonymously" id="submit" type="submit" value="ask">
-      </form>
-      
-      <label class="hide-completed">
-        <input class="ask-anonymously" type="checkbox" checked="{{hideCompleted}}" />
-        Anonymous Inquiry
-      </label>
+        <div id="question-loader">
+          <input id="ask-box" type="text" name="text" placeholder="Ask us a question!" />
+        </div>
+        <div>
+          <input id="question-submit" type="submit" value="ask"/>
+          <label id="post-options-border"><input id="ask-anonymously" class="anonymous-blurb" type="checkbox" checked="{{hideCompleted}}"/>Ask Anonymously</label>
+<!--           <input id="question-submit" type="submit" value="ask"/> -->
+        </div>    
+      </div>
+    </form>
     <ul>
       {{#each tasks}}
         {{> task}}
       {{/each}}
     </ul>
+
       </body>
 </template>
  
