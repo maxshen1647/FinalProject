@@ -14,7 +14,7 @@
 
 
 /* Styling for Main Body */
-body
+body.top-banner
 { 
   line-height: 20px;
   color: #222;
@@ -82,6 +82,26 @@ a#link-login
 a#link-login:hover 
 {
   background: #027EAF;
+  background-position: center bottom;
+  -webkit-stroke-width: 6px; /* Chrome and Safari support */
+  -webkit-stroke-color: #FFFFFF; /* Chrome and Safari support */
+  -webkit-fill-color: #FFFFFF; /* Chrome and Safari support */
+  -moz-stroke-width: 6px; /* Mozilla support */
+  -moz-stroke-color: #FFFFFF; /* Mozilla support */
+  -moz-fill-color: #FFFFFF; /* Mozilla support */
+  -o-stroke-width: 6px; /* Opera support */
+  -o-stroke-color: #FFFFFF; /* Opera support */
+  -o-fill-color: #FFFFFF; /* Opera support */
+  stroke-width: 6px; /* Standard support */
+  stroke-color: #FFFFFF; /* Standard support */
+  fill-color: #FFFFFF; /* Standard support */
+  text-shadow: 1px 0px 20px #FFFFFF;
+  color: #FFFFFF;
+}
+
+a#link-login:active
+{
+    background: #025E8F;
 }
 
 /* Styling for Ask Harvard Logo */
@@ -128,7 +148,6 @@ a#logo:hover
   fill-color: #FFFFFF; /* Standard support */
   text-shadow: 1px 0px 20px #FFFFFF;
   color: #FFFFFF;
-  background: #025E8F;
 }
 a#logo:hover span
 {
@@ -148,6 +167,11 @@ a#logo:hover span
   text-shadow: 1px 0px 20px #FFFFFF;
   color: #FFFFFF;
   color: #76EE00;
+}
+
+a#logo:active
+{
+    background: #025E8F;
 }
 
 /* Styling for Main link */
@@ -171,7 +195,27 @@ a#link-main
 /* Styling for on hover Main link */
 a#link-main:hover
 {
-  background-color: #027EAF;
+  background: #027EAF;
+  background-position: center bottom;
+  -webkit-stroke-width: 6px; /* Chrome and Safari support */
+  -webkit-stroke-color: #FFFFFF; /* Chrome and Safari support */
+  -webkit-fill-color: #FFFFFF; /* Chrome and Safari support */
+  -moz-stroke-width: 6px; /* Mozilla support */
+  -moz-stroke-color: #FFFFFF; /* Mozilla support */
+  -moz-fill-color: #FFFFFF; /* Mozilla support */
+  -o-stroke-width: 6px; /* Opera support */
+  -o-stroke-color: #FFFFFF; /* Opera support */
+  -o-fill-color: #FFFFFF; /* Opera support */
+  stroke-width: 6px; /* Standard support */
+  stroke-color: #FFFFFF; /* Standard support */
+  fill-color: #FFFFFF; /* Standard support */
+  text-shadow: 1px 0px 20px #FFFFFF;
+  color: #FFFFFF;
+}
+
+a#link-main:active
+{
+  background: #025E8F;
 }
 
 /* Styling for # question tracker */
@@ -187,70 +231,60 @@ a#link-main:hover
   font-family: Calibri;
   font-style: italic;
   font-weight: bold;
+  font-size: 15px;
 }
 
-/* General styling for Main Page body */
-body.page-main
+/* Styling for Main Page body */
+
+/* Styling for root page in Main */
+.root
 {
-  text-align: center;
+  height: 100%;
+  min-width: 320px;
 }
 
-/* Styling for the page root */
-.page-root 
+.page
 {
-    height: 100%;
-    min-width: 320px;
+  min-height: 600px;
 }
 
-.
-
-/* Styling for background in Main Page */
-.page #main-bg
+.margin
 {
-  z-index: 10;
+  padding-bottom: 0px;
+}
+
+#home-bg
+{
+  z-index: 50;
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0px;
   left: 0px;
   right: 0px;
-  /*background: url("/img/gate.png");*/
-  background-size: -webkit-cover; /* Chrome and Safari support */
-  background-size: -moz-cover;  /* Mozilla support */ 
-  background-size: -o-cover; /* Opera support */
-  background-size: cover; /* Standard support */
+  background-image: url("/img/gate.png");
+  background-position: 50% 50%;
+  background-size: cover;
 }
 
-/* Page styling for wrapping around text */
-.page-main .wrap
+.wrap
 {
-  z-index: 50;
-  position: relative;
+  position: absolute;
   width: 880px;
-  margin: 0px auto;
+
 }
-/* General styling for content in Main */
-.page-main .content
+
+.content
 {
-  z-index: 50;
   float: right;
   position: relative;
-  width: 520px;
+  width: 250px;
   margin-top: 30px;
 }
 
-/* Styling for Access blue button */
-.page-main .content .main-access
+.content .access-homepage
 {
-  z-index: 50;
-  /*background-color: #6F97B6;*/
-  background-color: -webkit-linear-gradient(center top , #6F97B6, #3F729B); /* Chrome and Safari support */
-  background-color: -moz-linear-gradient(center top , #6F97B6, #3F729B); /* Mozilla support */
-  background-color: -o-linear-gradient(center top , #6F97B6, #3F729B); /* Opera support */
-  background-color: linear-gradient(center top , #6F97B6, #3F729B); /* Standard support */
-  background-position: 50% 50%;
-  text-shadow: 0px 1px 1px #1C5380;
-  border: 1px solid #1C5380;
+  z-index: 100;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 1px 0px 0px rgba(255, 255, 255, 0.05) inset, -1px 0px 0px rgba(255, 255, 255, 0.05) inset, 0px 1px 0px rgba(255, 255, 255, 0.1) inset;
   position: absolute;
   right: 18px;
@@ -258,7 +292,54 @@ body.page-main
   padding: 13px 13px 12px 42px;
   font-size: 16px;
   text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.3);
-  }
+  border: 1px solid #1C5380;
+  background-position: 50% 50%;
+  background: -webkit-linear-gradient(center, #023E6F, #027EAF); /* Safari and Chrome support */
+  background: -moz-linear-gradient(bottom center, #023E6F, #027EAF); /* Mozilla support */
+  background: -o-linear-gradient(center, #023E6F, #027EAF); /* Operasupport */
+  background: linear-gradient(center, #023E6F, #027EAF); /* Standard support */
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: bold;
+  line-height: 1em;
+  text-decoration: none !important;
+  display: inline-block;
+  font-family: "proxima-nova","Helvetica Neue",Arial,Helvetica,sans-serif;
+}
 
+.content .access-homepage:hover
+{
+  background-color: #EEE;
+}
 
+.content .access-homepage:active
+{
+  border-color: #133856;
+  background: #025E8F;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15) inset, 0px 0px 1px rgba(0, 0, 0, 0.15) inset, 0px 1px 0px rgba(255, 255, 255, 0.2);
+  border-color: #133856;
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.3);
+}
 
+.content .access-homepage:visited
+{
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.content .access-homepage i
+{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: url("/img/shared-assets.png") no-repeat scroll 4px -196px transparent;
+}
+
+h1.askharvard-title
+{
+  z-index: 100;
+  position: absolute;
+}
