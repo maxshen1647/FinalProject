@@ -1,4 +1,26 @@
 <template name="homepage">
+      <body class="page-home">
+        <div class="page">
+          <div class="main">
+            <div id="home-bg"></div>
+            <div class="wrap"></div>
+          </div>
+        </div>
+        <form class="new-task">
+        <input id="ask-box" type="text" name="text" placeholder="Ask us a question!" />
+        <input class="ask-anonymously" id="submit" type="submit" value="ask">
+      </form>
+      
+      <label class="hide-completed">
+        <input class="ask-anonymously" type="checkbox" checked="{{hideCompleted}}" />
+        Anonymous Inquiry
+      </label>
+    <ul>
+      {{#each tasks}}
+        {{> task}}
+      {{/each}}
+    </ul>
+      </body>
 </template>
  
       
