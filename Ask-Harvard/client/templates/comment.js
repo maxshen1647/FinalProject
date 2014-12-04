@@ -1,5 +1,5 @@
 Template.comment.helpers({
-  submittedText: function() {
+  timestamp: function() {
     return this.submitted.toString();
   }
 });
