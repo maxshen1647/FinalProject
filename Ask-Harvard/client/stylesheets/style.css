@@ -19,17 +19,10 @@
   padding: 0;
 }
 
-.navbar
-{
-  overflow: visible;
-  margin-bottom: 20px;
-  margin: 0;
-  display: block;
-  line-height: 20px;
-}
-
 #navbar-inner 
 {
+  z-index: 1000;
+  position: relative;
   min-height: 42px;
   padding-left: 20px;
   padding-right: 20px;
@@ -108,7 +101,6 @@
   -webkit-box-shadow: none;
   box-shadow: none;
   color: hsl(0,0%,92%);
-  /*font-size: 16px;*/
   text-shadow: none;
 }
 
@@ -138,7 +130,7 @@ a#logo
   background: -moz-linear-gradient(bottom center, #023E6F, #027EAF); /* Mozilla support */
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#027EAF), to(#023E6F));
   outline-color: none;
-  font-size: 26px;
+  font-size: 28px;
 }
 a#logo span
 {
@@ -195,12 +187,12 @@ a#login-sign-in-link
 {
   vertical-align: center;
   margin-top: 1px;
-  margin-right: 6px;
   -webkit-box-shadow: none;
   box-shadow: none;
   color: hsl(0,0%,92%);
   font-size: 15px;
-  padding: 12px 6px;
+  margin-right: 6px; 
+  padding: 12px 10px;
   text-shadow: none;
   text-decoration: none;
   font-weight: bold;
@@ -214,12 +206,12 @@ a#login-name-link
 {
   vertical-align: center;
   margin-top: 1px;
-  margin-right: 6px;
   -webkit-box-shadow: none;
   box-shadow: none;
   color: hsl(0,0%,92%);
   font-size: 15px;
-  padding: 12px 6px;
+  margin-right: 6px;
+  padding: 12px 12px;
   text-shadow: none;
   text-decoration: none;
   font-weight: bold;
@@ -271,6 +263,7 @@ a#link-main
   background: -moz-linear-gradient(bottom center, #023E6F, #027EAF); /* Mozilla support */
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#027EAF), to(#023E6F));
   outline-color: none;
+  font-size: 15px;
 }
 
 /* Styling for on hover Home */
@@ -299,6 +292,29 @@ a#link-main:active
     background: #025E8F;
 }
 
+/* Position and width for text and button wrap in Main page */
+.wrap
+{
+  z-index: 100;
+  position: relative;
+  width: 880px;
+  margin-top: 0%;
+
+}
+
+/* Styling for root page in Main */
+.root
+{
+  height: 100%;
+  min-width: 320px;
+}
+
+/* Adds minimum height to text-page inside Main page */
+.page-in-root
+{
+  min-height: 600px;
+}
+
 /* Styling for Main page background */
 #main-bg
 {
@@ -309,7 +325,78 @@ a#link-main:active
   top: -5px;
   left: 0px;
   right: 0px;
-  background-image: url("/img/john-harvard1.jpg");
+  background-image: url("/img/john-harvard1.png");
   background-position: 50% 40px;
   background-size: cover;
+}
+
+/* Adds margin and position for Ask Now button */
+.content
+{
+  float: right;
+  position: relative;
+  width: 250px;
+  margin-top: 2%;
+}
+
+/* Styling for Ask Now button */
+.content .access-homepage
+{
+  z-index: 100;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 1px 0px 0px rgba(255, 255, 255, 0.05) inset, -1px 0px 0px rgba(255, 255, 255, 0.05) inset, 0px 1px 0px rgba(255, 255, 255, 0.1) inset;
+  position: relative;
+  left: -152%;
+  top: 350px;
+  padding: 13px 13px 12px 42px;
+  font-size: 16px;
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.3);
+  border: 1px solid #1C5380;
+  background-position: 50% 50%;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#027EAF), to(#023E6F)); /* Safari and Chrome support */
+  background: -moz-linear-gradient(bottom center, #023E6F, #027EAF); /* Mozilla support */
+  background: -o-linear-gradient(bottom center, #023E6F, #027EAF); /* Operasupport */
+  background: linear-gradient(bottom center, #023E6F, #027EAF); /* Standard support */
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: bold;
+  line-height: 1em;
+  text-decoration: none !important;
+  display: inline-block;
+  font-family: "proxima-nova","Helvetica Neue",Arial,Helvetica,sans-serif;
+}
+
+/* Hover styling for Ask Now button */
+.content .access-homepage:hover
+{
+  background-color: #EEE;
+}
+
+/* Active styling for Ask Now button */
+.content .access-homepage:active
+{
+  border-color: #133856;
+  background: #025E8F;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15) inset, 0px 0px 1px rgba(0, 0, 0, 0.15) inset, 0px 1px 0px rgba(255, 255, 255, 0.2);
+  border-color: #133856;
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.3);
+}
+
+/* Visited styling for Ask Now button */
+.content .access-homepage:visited
+{
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Add house icon in Ask Now button */
+.content .access-homepage i
+{
+  z-index: 100;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: url("/img/shared-assets.png") no-repeat scroll 4px -196px transparent;
 }
