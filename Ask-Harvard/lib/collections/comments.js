@@ -20,11 +20,13 @@ Meteor.methods({
 		var user = Meteor.user();    
 		var post = Tasks.findOne(commentAttributes.postId);    
 		if (!post)      
-			alert('invalid-comment', 'You must comment on a post');    
+			alert('You must answer a question');    
 		comment = _.extend(commentAttributes, {      
 			userId: user._id,      
 			author: user.username,      
-			submitted: new Date()    
+			submitted: new Date(),
+			upvoters: [],
+			votes: 0    
 		});    
 		return Comments.insert(comment);  
 	},
