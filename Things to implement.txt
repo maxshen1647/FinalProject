@@ -11,3 +11,4 @@ capcha when you get spammed
 
 allow editing questions
 make comment publishing more efficient
+pluralize
