@@ -1,0 +1,405 @@
+/**
+ * styles.css
+ *
+ * CS50 Final Project
+ *
+ * Global CSS.
+ */
+
+/* PLACEHOLDER */
+#ask-box
+{
+  margin-top: 50px;
+}
+
+
+/* Styling for Main Body */
+body.top-banner
+{ 
+  line-height: 20px;
+  color: #222;
+  font-size: 1.4rem;
+  font-family: "Calibri","Helvetica Neue", Arial,Helvetica,sans-serif;
+}
+
+/* Base styling for top banner */
+.top-banner
+{
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 14px;
+  text-align: left;
+  color: #000;
+}
+
+/* Styling for elements in top banner */
+.top-banner #top-menu
+{
+  z-index: 1000;
+  width: 100%;
+  height: 35px;
+  position: absolute;
+  top: 0px;
+  left: 0%;
+  right: 0px;
+  background: -moz-linear-gradient(center top , #027EAF, #023E6F); /* Mozilla support */
+  background: -webkit-linear-gradient(center top , #903000, #500000); /* Chrome and Safari support */
+  background: -o-linear-gradient(center top , #903000, #500000); /* Opera support */
+  background: linear-gradient(center top , #903000, #500000); /* Standard support */
+  background-position: 50% 50%;
+  box-shadow: 0px 1px 14px 4px #000;
+}
+
+/* Base style for text in banner */
+#menu-top
+{
+  display: block;
+  position: relative;
+  width: 716px;
+  height: 42px;
+  margin: 0px auto;
+  padding: 0px 17px 0px 0px;
+}
+
+/* Styling for sign in button */
+a#link-login
+{
+  display: block;
+  min-width: 52px;
+  float: right;
+  margin: -29px 0px 0px 10px;
+  padding: 4px 10px 4px;
+  font-size: 14px;
+  line-height: 14px;
+  background: none repeat scroll 0% 0% #023E6F;
+  border: 1px solid #19314A;
+  color: #FFF;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Styling for on-hover sign in button */
+a#link-login:hover 
+{
+  background: #027EAF;
+  background-position: center bottom;
+  -webkit-stroke-width: 6px; /* Chrome and Safari support */
+  -webkit-stroke-color: #FFFFFF; /* Chrome and Safari support */
+  -webkit-fill-color: #FFFFFF; /* Chrome and Safari support */
+  -moz-stroke-width: 6px; /* Mozilla support */
+  -moz-stroke-color: #FFFFFF; /* Mozilla support */
+  -moz-fill-color: #FFFFFF; /* Mozilla support */
+  -o-stroke-width: 6px; /* Opera support */
+  -o-stroke-color: #FFFFFF; /* Opera support */
+  -o-fill-color: #FFFFFF; /* Opera support */
+  stroke-width: 6px; /* Standard support */
+  stroke-color: #FFFFFF; /* Standard support */
+  fill-color: #FFFFFF; /* Standard support */
+  text-shadow: 1px 0px 20px #FFFFFF;
+  color: #FFFFFF;
+}
+
+a#link-login:active
+{
+    background: #025E8F;
+}
+
+/* Styling for Ask Harvard Logo */
+a#logo
+{
+  display: block;
+  margin: 2px 200px;
+  text-align: center;
+  border: 0px none;
+  font-family: Calibri;
+  font-style: italic;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 28px;
+  color: #FFFFFF;
+  padding: 4px 10px 4px;
+  border: 1px solid #19314A;
+  border-radius: 5px;
+  background: -webkit-linear-gradient(center, #023E6F, #027EAF); /* Safari and Chrome support */
+  background: -moz-linear-gradient(bottom center, #023E6F, #027EAF); /* Mozilla support */
+  background: -o-linear-gradient(center, #023E6F, #027EAF); /* Operasupport */
+  background: linear-gradient(center, #023E6F, #027EAF); /* Standard support */
+}
+a#logo span
+{
+  color: #66CD00;
+}
+
+/* Styling for on hover Ask Harvard Logo */
+a#logo:hover
+{
+  background-position: center bottom;
+  -webkit-stroke-width: 6px; /* Chrome and Safari support */
+  -webkit-stroke-color: #FFFFFF; /* Chrome and Safari support */
+  -webkit-fill-color: #FFFFFF; /* Chrome and Safari support */
+  -moz-stroke-width: 6px; /* Mozilla support */
+  -moz-stroke-color: #FFFFFF; /* Mozilla support */
+  -moz-fill-color: #FFFFFF; /* Mozilla support */
+  -o-stroke-width: 6px; /* Opera support */
+  -o-stroke-color: #FFFFFF; /* Opera support */
+  -o-fill-color: #FFFFFF; /* Opera support */
+  stroke-width: 6px; /* Standard support */
+  stroke-color: #FFFFFF; /* Standard support */
+  fill-color: #FFFFFF; /* Standard support */
+  text-shadow: 1px 0px 20px #FFFFFF;
+  color: #FFFFFF;
+}
+a#logo:hover span
+{
+  background-position: center bottom;
+  -webkit-stroke-width: 6px; /* Chrome and Safari support */
+  -webkit-stroke-color: #FFFFFF; /* Chrome and Safari support */
+  -webkit-fill-color: #FFFFFF; /* Chrome and Safari support */
+  -moz-stroke-width: 6px; /* Mozilla support */
+  -moz-stroke-color: #FFFFFF; /* Mozilla support */
+  -moz-fill-color: #FFFFFF; /* Mozilla support */
+  -o-stroke-width: 6px; /* Opera support */
+  -o-stroke-color: #FFFFFF; /* Opera support */
+  -o-fill-color: #FFFFFF; /* Opera support */
+  stroke-width: 6px; /* Standard support */
+  stroke-color: #FFFFFF; /* Standard support */
+  fill-color: #FFFFFF; /* Standard support */
+  text-shadow: 1px 0px 20px #FFFFFF;
+  color: #FFFFFF;
+  color: #76EE00;
+}
+
+a#logo:active
+{
+    background: #025E8F;
+}
+
+/* Styling for Main link */
+a#link-main
+{
+  float: left;
+  min-width: 52px;
+  margin: 3px 0px 0px 0px;
+  padding: 6px 10px 4px;
+  text-align: right;
+  font-size: 14px;
+  line-height: 14px;
+  background: none repeat scroll 0% 0% #023E6F;
+  border: 1px solid #19314A;
+  color: #FFF;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Styling for on hover Main link */
+a#link-main:hover
+{
+  background: #027EAF;
+  background-position: center bottom;
+  -webkit-stroke-width: 6px; /* Chrome and Safari support */
+  -webkit-stroke-color: #FFFFFF; /* Chrome and Safari support */
+  -webkit-fill-color: #FFFFFF; /* Chrome and Safari support */
+  -moz-stroke-width: 6px; /* Mozilla support */
+  -moz-stroke-color: #FFFFFF; /* Mozilla support */
+  -moz-fill-color: #FFFFFF; /* Mozilla support */
+  -o-stroke-width: 6px; /* Opera support */
+  -o-stroke-color: #FFFFFF; /* Opera support */
+  -o-fill-color: #FFFFFF; /* Opera support */
+  stroke-width: 6px; /* Standard support */
+  stroke-color: #FFFFFF; /* Standard support */
+  fill-color: #FFFFFF; /* Standard support */
+  text-shadow: 1px 0px 20px #FFFFFF;
+  color: #FFFFFF;
+}
+
+a#link-main:active
+{
+  background: #025E8F;
+}
+
+/* Styling for # question tracker */
+#counter-top-right
+{
+  float: right;
+  display: block;
+  position: relative;
+  width: 326px;
+  margin: -47px auto;
+  padding: 10px 17px 0px 0px;
+  color: #FFF;
+  font-family: Calibri;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+/* Styling for Main Page body */
+
+/* Styling for root page in Main */
+.root
+{
+  height: 100%;
+  min-width: 320px;
+}
+
+/* Adds minimum height to text-page inside Main page */
+.page-in-root
+{
+  min-height: 600px;
+}
+
+/* Styling for Main page background */
+#main-bg
+{
+  z-index: 10;
+  width: 100%;
+  height: 102%;
+  position: absolute;
+  top: -5px;
+  left: 0px;
+  right: 0px;
+  background-image: url("/img/john-harvard.jpg");
+  background-position: 50% 40px;
+  background-size: cover;
+}
+
+/* Position and width for text and button wrap in Main page */
+.wrap
+{
+  z-index: 100;
+  position: absolute;
+  width: 880px;
+
+}
+
+/* Adds margin and position for Ask Now button */
+.content
+{
+  float: right;
+  position: relative;
+  width: 250px;
+  margin-top: 30px;
+}
+
+/* Styling for Ask Now button */
+.content .access-homepage
+{
+  z-index: 100;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 1px 0px 0px rgba(255, 255, 255, 0.05) inset, -1px 0px 0px rgba(255, 255, 255, 0.05) inset, 0px 1px 0px rgba(255, 255, 255, 0.1) inset;
+  position: absolute;
+  right: -165px;
+  top: 300px;
+  padding: 13px 13px 12px 42px;
+  font-size: 16px;
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.3);
+  border: 1px solid #1C5380;
+  background-position: 50% 50%;
+  background: -webkit-linear-gradient(center, #023E6F, #027EAF); /* Safari and Chrome support */
+  background: -moz-linear-gradient(bottom center, #023E6F, #027EAF); /* Mozilla support */
+  background: -o-linear-gradient(center, #023E6F, #027EAF); /* Operasupport */
+  background: linear-gradient(center, #023E6F, #027EAF); /* Standard support */
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: bold;
+  line-height: 1em;
+  text-decoration: none !important;
+  display: inline-block;
+  font-family: "proxima-nova","Helvetica Neue",Arial,Helvetica,sans-serif;
+}
+
+/* Hover styling for Ask Now button */
+.content .access-homepage:hover
+{
+  background-color: #EEE;
+}
+
+/* Active styling for Ask Now button */
+.content .access-homepage:active
+{
+  border-color: #133856;
+  background: #025E8F;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15) inset, 0px 0px 1px rgba(0, 0, 0, 0.15) inset, 0px 1px 0px rgba(255, 255, 255, 0.2);
+  border-color: #133856;
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.3);
+}
+
+/* Visited styling for Ask Now button */
+.content .access-homepage:visited
+{
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Add house icon in Ask Now button */
+.content .access-homepage i
+{
+  z-index: 100;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: url("/img/shared-assets.png") no-repeat scroll 4px -196px transparent;
+}
+
+#question-form
+{
+  z-index: 50;
+  position: absolute;
+  display: block;
+  width: 99.3%;
+  margin: 0px -16px;
+  height: 80px;
+  top: 26px;
+  padding: 5px;
+  overflow: hidden;
+  background: -webkit-linear-gradient(bottom center, #80070F, #FF5050); /* Chrome and Safari support */
+  background: -moz-linear-gradient(bottom center, #80070F, #FF5050); /* Mozilla support */
+  background: -o-linear-gradient(bottom center, #80070F, #FF5050); /* Opera support */
+  background: linear-gradient(bottom center, #80070F, #FF5050); /* Standard support */
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.question-bar
+{
+  position: absolute;
+  display: inline-block;
+  width: 400px;
+  margin-top: -20px;
+}
+
+#question-title-bar
+{
+  z-index: 200;
+  display: block;
+  position: absolute;
+  top: 23px;
+  left: 15px;
+  font-family: Calibri;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 30px;
+  color: #fff;
+}
+
+#post-options-border
+{
+    display: block;
+    padding-left: 15px;
+    text-indent: -5px;
+}
+
+#question-submit
+{
+    width: 60px;
+    height: 20px;
+    margin: 2px;
+    vertical-align: bottom;
+    position: absolute;
+    top: 50px;
+    *overflow: hidden;
+}
+
