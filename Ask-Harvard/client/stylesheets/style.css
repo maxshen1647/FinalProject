@@ -1,0 +1,315 @@
+/**
+ * styles.css
+ *
+ * CS50 Final Project
+ *
+ * Global CSS.
+ */
+
+/* PLACEHOLDER */
+
+.page-main
+{
+  display: block;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  text-align: left;
+  color: #000;
+  margin: 42px 0 0;
+  padding: 0;
+}
+
+.navbar
+{
+  overflow: visible;
+  margin-bottom: 20px;
+  margin: 0;
+  display: block;
+  line-height: 20px;
+}
+
+#navbar-inner 
+{
+  min-height: 42px;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-shadow: 0px 1px 14px 4px #000;
+  background: -moz-linear-gradient(bottom center, #023E6F, #027EAF); /* Mozilla support */
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#027EAF), to(#023E6F));
+}
+
+#toolbar .navbar-inner 
+{
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  z-index: 10;
+  border-radius: 0 0 0 0;
+  padding-left: 100%;
+  padding-right: 100%;
+  margin-left: -100%;
+  margin-right: -100%;
+  background-color: hsla(0,0%,20%,0.5);
+}
+
+.navbar-inner .container-navbar
+{
+  margin: 0;
+  padding: 0;
+}
+.container-navbar 
+{
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+#toolbar-links
+{
+  padding-right: 8px;
+}
+
+.navbar .navbar-pull
+{
+  float: right;
+  margin: 0 10px 0 0;
+  list-style: none;
+  position: relative;
+  left: 0;
+  display: block;
+}
+
+.navbar .nav
+{
+  position: relative;
+  left: 0;
+  display: block;
+  float: left;
+  margin: 0 20px 0 0;
+}
+
+.navbar .nav > li
+{
+  float: left;
+  line-height: 20px;
+  font-size: 15px;
+}
+
+#mainmenu .active > a 
+{
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0 0 0 0;
+  font-weight: bold;
+  color: hsl(0,0%,92%);
+  text-decoration: none;
+}
+
+#mainmenu > li > a
+{
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: hsl(0,0%,92%);
+  /*font-size: 16px;*/
+  text-shadow: none;
+}
+
+.navbar .nav > li > a
+{
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0 0 0 0;
+  font-weight: bold;
+  color: hsl(0,0%,92%);
+  text-decoration: none;
+}
+
+.nav > li > a
+{
+  display: block;
+}
+
+/* Styling for Ask Harvard Logo */
+a#logo
+{
+  font-family: Calibri;
+  font-weight: bold;
+  font-style: italic;
+  padding-right: 12px;
+  padding-left: 12px;
+  background: -moz-linear-gradient(bottom center, #023E6F, #027EAF); /* Mozilla support */
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#027EAF), to(#023E6F));
+  outline-color: none;
+  font-size: 26px;
+}
+a#logo span
+{
+  color: #66CD00;
+}
+
+/* Styling for on hover Ask Harvard Logo */
+a#logo:hover
+{
+  background-position: center bottom;
+  -webkit-stroke-width: 6px; /* Chrome and Safari support */
+  -webkit-stroke-color: #FFFFFF; /* Chrome and Safari support */
+  -webkit-fill-color: #FFFFFF; /* Chrome and Safari support */
+  -moz-stroke-width: 6px; /* Mozilla support */
+  -moz-stroke-color: #FFFFFF; /* Mozilla support */
+  -moz-fill-color: #FFFFFF; /* Mozilla support */
+  -o-stroke-width: 6px; /* Opera support */
+  -o-stroke-color: #FFFFFF; /* Opera support */
+  -o-fill-color: #FFFFFF; /* Opera support */
+  stroke-width: 6px; /* Standard support */
+  stroke-color: #FFFFFF; /* Standard support */
+  fill-color: #FFFFFF; /* Standard support */
+  text-shadow: 1px 0px 20px #FFFFFF;
+  color: #FFFFFF;
+}
+
+a#logo:hover span
+{
+  background-position: center bottom;
+  -webkit-stroke-width: 6px; /* Chrome and Safari support */
+  -webkit-stroke-color: #FFFFFF; /* Chrome and Safari support */
+  -webkit-fill-color: #FFFFFF; /* Chrome and Safari support */
+  -moz-stroke-width: 6px; /* Mozilla support */
+  -moz-stroke-color: #FFFFFF; /* Mozilla support */
+  -moz-fill-color: #FFFFFF; /* Mozilla support */
+  -o-stroke-width: 6px; /* Opera support */
+  -o-stroke-color: #FFFFFF; /* Opera support */
+  -o-fill-color: #FFFFFF; /* Opera support */
+  stroke-width: 6px; /* Standard support */
+  stroke-color: #FFFFFF; /* Standard support */
+  fill-color: #FFFFFF; /* Standard support */
+  text-shadow: 1px 0px 20px #FFFFFF;
+  color: #FFFFFF;
+  color: #76EE00;
+}
+
+/* Styling for on click Ask Harvard Logo */
+a#logo:active
+{
+    background: #025E8F;
+}
+
+a#login-sign-in-link
+{
+  vertical-align: center;
+  margin-top: 1px;
+  margin-right: 6px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: hsl(0,0%,92%);
+  font-size: 15px;
+  padding: 12px 6px;
+  text-shadow: none;
+  text-decoration: none;
+  font-weight: bold;
+  background: -moz-linear-gradient(bottom center, #023E6F, #027EAF); /* Mozilla support */
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#027EAF), to(#023E6F));
+  outline-color: none;
+  float: right;
+}
+
+a#login-name-link
+{
+  vertical-align: center;
+  margin-top: 1px;
+  margin-right: 6px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: hsl(0,0%,92%);
+  font-size: 15px;
+  padding: 12px 6px;
+  text-shadow: none;
+  text-decoration: none;
+  font-weight: bold;
+  background: -moz-linear-gradient(bottom center, #023E6F, #027EAF); /* Mozilla support */
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#027EAF), to(#023E6F));
+  outline-color: none;
+  float: right;
+}
+
+a#login-sign-in-link:hover
+{
+  background-position: center bottom;
+  -webkit-stroke-width: 6px; /* Chrome and Safari support */
+  -webkit-stroke-color: #FFFFFF; /* Chrome and Safari support */
+  -webkit-fill-color: #FFFFFF; /* Chrome and Safari support */
+  -moz-stroke-width: 6px; /* Mozilla support */
+  -moz-stroke-color: #FFFFFF; /* Mozilla support */
+  -moz-fill-color: #FFFFFF; /* Mozilla support */
+  -o-stroke-width: 6px; /* Opera support */
+  -o-stroke-color: #FFFFFF; /* Opera support */
+  -o-fill-color: #FFFFFF; /* Opera support */
+  stroke-width: 6px; /* Standard support */
+  stroke-color: #FFFFFF; /* Standard support */
+  fill-color: #FFFFFF; /* Standard support */
+  text-shadow: 1px 0px 20px #FFFFFF;
+  color: #FFFFFF;
+}
+
+a#login-sign-in-link:active
+{
+    background: #025E8F;
+}
+
+#question-counter
+{
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: hsl(0,0%,92%);
+  font-size: 14px;
+  text-shadow: none;
+  text-decoration: none;
+  padding-top: 11px;
+  padding-left: 4px;
+}
+
+/* Styling for Home */
+a#link-main
+{
+  background: -moz-linear-gradient(bottom center, #023E6F, #027EAF); /* Mozilla support */
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#027EAF), to(#023E6F));
+  outline-color: none;
+}
+
+/* Styling for on hover Home */
+a#link-main:hover
+{
+  background-position: center bottom;
+  -webkit-stroke-width: 6px; /* Chrome and Safari support */
+  -webkit-stroke-color: #FFFFFF; /* Chrome and Safari support */
+  -webkit-fill-color: #FFFFFF; /* Chrome and Safari support */
+  -moz-stroke-width: 6px; /* Mozilla support */
+  -moz-stroke-color: #FFFFFF; /* Mozilla support */
+  -moz-fill-color: #FFFFFF; /* Mozilla support */
+  -o-stroke-width: 6px; /* Opera support */
+  -o-stroke-color: #FFFFFF; /* Opera support */
+  -o-fill-color: #FFFFFF; /* Opera support */
+  stroke-width: 6px; /* Standard support */
+  stroke-color: #FFFFFF; /* Standard support */
+  fill-color: #FFFFFF; /* Standard support */
+  text-shadow: 1px 0px 20px #FFFFFF;
+  color: #FFFFFF;
+}
+
+/* Styling for on click Home */
+a#link-main:active
+{
+    background: #025E8F;
+}
+
+/* Styling for Main page background */
+#main-bg
+{
+  z-index: 10;
+  width: 100%;
+  height: 102%;
+  position: absolute;
+  top: -5px;
+  left: 0px;
+  right: 0px;
+  background-image: url("/img/john-harvard1.jpg");
+  background-position: 50% 40px;
+  background-size: cover;
+}

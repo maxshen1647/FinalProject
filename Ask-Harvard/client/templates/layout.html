@@ -1,13 +1,31 @@
 <template name="layout">
-	<body class="top-banner">
-		<div id="top-menu">
-			<div id="menu-top">
-				<a id="link-main" href='/'>Main</a>
-				<a id="logo" href='/homepage'>ask<span>Harvard</span></a>
-				<a id="link-login">{{> loginButtons}}</a>
+	<body class="top-navigation-bar">
+		<header>
+			<div id="toolbar" class="navbar">
+				<div id="navbar-inner">
+					<div class="container-navbar">
+						<ul id="toolbar-links" class="navbar-pull">
+							<li>
+								<ul id="mainmenu" class="nav">
+									<li class="active">
+										<a id="logo" href="/">ask<span>Harvard</span></a>
+									</li>
+									<li>
+										<a id="link-main" href="/homepage">Home</a>
+									</li>
+									<li>
+										<div id="link-login">{{> loginButtons}}</div>
+									</li>
+									<li>
+										<label id="question-counter">{{questionsCount}} Questions Asked. {{answersCount}} Total Answers.</label>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
 			</div>
-			<div id="counter-top-right">{{questionsCount}} Questions Asked. {{answersCount}} Total Answers.</div>
-		</div>
+		</header>
 	</body>
 	{{>yield}}
  </template>
