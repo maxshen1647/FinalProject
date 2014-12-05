@@ -10,4 +10,4 @@ capcha when you get spammed
     Store any state that you want to be shareable between users within the URL itself.
 
 allow editing questions
-make comment publishing more efficient (denormalize)
+make comment publishing more efficient
