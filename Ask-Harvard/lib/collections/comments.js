@@ -27,5 +27,22 @@ Meteor.methods({
 			submitted: new Date()    
 		});    
 		return Comments.insert(comment);  
-	}
+	},
+
+	upvote: function(postId) {
+		check(this.userId, String); // produces error in console
+		check(postId, String);
+
+		var comment = Comments.findOne(postId);
+		if (!comment)
+			alert('Answer not found');
+
+		if (_.include(comment.upvoters, this.userId))
+			alert('Already upvoted this answer');
+
+		Comments.update(comment._id, {
+			$addToSet: {upvoters: this.userId},
+			$inc: {votes: 1}
+		});
+	}	
 });

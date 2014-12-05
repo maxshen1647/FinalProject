@@ -6,6 +6,15 @@ Template.comment.helpers({
   // returns the time of submission
   timestamp: function() {
     return this.submitted.toString();
+  },
+  // returns the status of the upvote button
+  upvotedClass: function() {    
+    var userId = Meteor.userId();    
+    if (userId && !_.include(this.upvoters, userId)) {      
+      return 'btn-primary upvotable';    
+    } else {      
+      return 'disabled';    
+    }  
   }
 });
 
@@ -13,5 +22,11 @@ Template.comment.helpers({
 Template.comment.events({
   "click .delete": function () {
     Comments.remove(this._id);
+  },
+  "click .upvotable": function(e) { 
+     if (Meteor.user() == null)
+      alert("You must sign in to upvote.");   
+    e.preventDefault();    
+    Meteor.call('upvote', this._id);  
   }
 });
