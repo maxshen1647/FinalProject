@@ -1,0 +1,39 @@
+Documentation
+Lucas Urbisaia (lucasurbisaia@college.harvard.edu)
+Max Shen (gshen@college.harvard.edu)
+http://askharvard.meteor.com
+
+To use askHarvard, simply visit http://askharvard.meteor.com in Firefox or Chrome. (Unfortunately our CSS gets a bit wonky in Internet Explorer, but who uses that nowadays anyway...) If you would like to set up the site on localhost, see instructions at the end.
+
+Using the Website
+	Mainpage
+		When you enter the site, you arrive at the mainpage. Click the Ask Now button to be taken to our homepage. 
+	Navigation Bar
+		There is a navigation bar with different buttons at all times. The logo takes you to the mainpage, Home takes you to homepage, you have a sign in button, and the total number questions and answers are displayed as well. 
+	Asking Questions
+		The homepage is where you can ask, answer, and read existing Q&As. There is an ask box that you can type your question and a checkbox if you want to ask anonymously (your username won't show up beside the question). Users must register/sign in before asking! You won't be able to sign in until you click the verification link sent to your email after registering. After you submit your question, it will be displayed along with the other ones on the homepage. Questions are sorted by time, beggining with the most recent. The question counter on the Nav bar will be updated
+	Answering questions
+		If you would like to answer a question, click the button that says "X Answers" (with X being the number of existing answers) and you will be taken to another page that contains the question, any existing answers, and a form that allows you to submit your answer. The form will only appear if you are SIGNED IN WITH A @COLLEGE.HARVARD.EDU EMAIL. After you submit, the answers counter on the Nav bar will update.
+	Upvoting
+		If you find an answer helpful, please upvote it! The upvote button is on the right of every answer and shows the current number of upvotes. You will only be able to upvote if you are signed in, and will not be able to upvote the same answer twice.
+
+	Deleting Questions and Answers
+		You have the option of deleting you past questions and answers fromm the site if you wish. Simply click the x on the right side of a question or answer. You will only have access to this button if you are signed in and the question or answer belongs to you. Even if it was an anonymous question, our database will be able to tell and will grant you access to the button if you submitted it. WARNING: Deleting a question will also delete all answers attached to it.
+
+
+Directions for setting up the website on locahost
+
+1. Download the zip file containing the source code
+2.  Install Meteor 1.0
+	If using Mac or Linux, open the terminal and type: curl https://install.meteor.com/ | sh
+	If using Windows, it is best to use an online sandbox called nitrous.io to run meteor. Follow the instructions at this link: http://help.nitrous.io/
+3. In your terminal (or nitrous console), navigate to the directory FinalProject/Ask-Harvard
+4. Enter the command: meteor
+5. You should see in the terminal: App rnning at: http://localhost:3000
+6. If using Mac or Linux, go to localhost:3000 to access the website. If using Nitrous, click the Preview tab at the top of the page and select Port 3000
+
+
+
+
+
+
