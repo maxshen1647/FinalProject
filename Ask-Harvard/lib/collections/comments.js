@@ -42,6 +42,6 @@ Meteor.methods({
           $addToSet: {upvoters: this.userId},      
           $inc: {votes: 1}    });    
     if (! affected)      
-      alert('invalid', "You weren't able to upvote that post");
+      alert("You weren't able to upvote that post");
 	}	
 });

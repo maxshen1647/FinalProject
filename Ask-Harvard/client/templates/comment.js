@@ -23,9 +23,7 @@ Template.comment.events({
   "click .delete": function () {
     Comments.remove(this._id);
   },
-  "click .upvotable": function(e) { 
-     if (Meteor.user() == null)
-      alert("You must sign in to upvote.");   
+  "click .upvotable": function(e) {   
     e.preventDefault();    
     Meteor.call('upvote', this._id);  
   }
