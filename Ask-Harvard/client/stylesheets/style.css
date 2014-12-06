@@ -6,8 +6,8 @@
  * Global CSS.
  */
 
-/* PLACEHOLDER */
 
+/* Basic formatting for all elements in main page */
 .page-main
 {
   display: block;
@@ -19,18 +19,28 @@
   padding: 0;
 }
 
+/* Top header top position */
+#top
+{
+  height: 0px; 
+}
+
+/* Set basic depth, position and properties of navigation bar */
 #navbar-inner 
 {
   z-index: 1000;
-  position: relative;
+  position: fixed;
+  width: 100%;
   min-height: 42px;
   padding-left: 20px;
   padding-right: 20px;
   box-shadow: 0px 1px 14px 4px #000;
   background: -moz-linear-gradient(bottom center, #023E6F, #027EAF); /* Mozilla support */
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#027EAF), to(#023E6F));
+  background-attachment: scroll;
 }
 
+/* Sey basic format for elements in navigation bar */
 #toolbar .navbar-inner 
 {
   -webkit-box-shadow: none;
@@ -44,41 +54,28 @@
   background-color: hsla(0,0%,20%,0.5);
 }
 
-.navbar-inner .container-navbar
-{
-  margin: 0;
-  padding: 0;
-}
-.container-navbar 
-{
-  padding-right: 20px;
-  padding-left: 20px;
-}
-
-#toolbar-links
-{
-  padding-right: 8px;
-}
-
+/* Floating for back layer in navigation bar */
 .navbar .navbar-pull
 {
   float: right;
   margin: 0 10px 0 0;
   list-style: none;
-  position: relative;
+  position: fixed;
   left: 0;
   display: block;
 }
 
+/* Fix navigation bar to top of screen */
 .navbar .nav
 {
-  position: relative;
-  left: 0;
+  position: fixed;
+  right: 0;
   display: block;
   float: left;
   margin: 0 20px 0 0;
 }
 
+/* Floating for list elements in navigation bar */
 .navbar .nav > li
 {
   float: left;
@@ -86,6 +83,7 @@
   font-size: 15px;
 }
 
+/* Shadow and bordering for active elements in menu list */
 #mainmenu .active > a 
 {
   -webkit-box-shadow: none;
@@ -96,6 +94,7 @@
   text-decoration: none;
 }
 
+/* Shadow for elements in menu list */
 #mainmenu > li > a
 {
   -webkit-box-shadow: none;
@@ -104,6 +103,7 @@
   text-shadow: none;
 }
 
+/* Color and shadows for elements in navigation bar */
 .navbar .nav > li > a
 {
   -webkit-box-shadow: none;
@@ -114,6 +114,7 @@
   text-decoration: none;
 }
 
+/* Block display for list elements in navigation bar */
 .nav > li > a
 {
   display: block;
@@ -157,6 +158,7 @@ a#logo:hover
   color: #FFFFFF;
 }
 
+/* Styling for on hover Ask Harvard Logo */
 a#logo:hover span
 {
   background-position: center bottom;
@@ -183,6 +185,7 @@ a#logo:active
     background: #025E8F;
 }
 
+/* Styling for Log In link */
 a#login-sign-in-link
 {
   vertical-align: center;
@@ -202,6 +205,7 @@ a#login-sign-in-link
   float: right;
 }
 
+/* Styling for Logged In Name display */
 a#login-name-link
 {
   vertical-align: center;
@@ -221,6 +225,7 @@ a#login-name-link
   float: right;
 }
 
+/* Styling for Sign In link on hover */
 a#login-sign-in-link:hover
 {
   background-position: center bottom;
@@ -240,11 +245,13 @@ a#login-sign-in-link:hover
   color: #FFFFFF;
 }
 
+/* Styling for Sign In link on click */
 a#login-sign-in-link:active
 {
     background: #025E8F;
 }
 
+/* Styling for the Q&A counter */
 #question-counter
 {
   -webkit-box-shadow: none;
@@ -320,9 +327,9 @@ a#link-main:active
 {
   z-index: 10;
   width: 100%;
-  height: 102%;
-  position: absolute;
-  top: -5px;
+  height: 100%;
+  position: fixed;
+  top: 0px;
   left: 0px;
   right: 0px;
   background-image: url("/img/john-harvard1.png");
@@ -334,7 +341,7 @@ a#link-main:active
 .content
 {
   float: right;
-  position: relative;
+  position: inherit;
   width: 250px;
   margin-top: 2%;
 }
@@ -344,14 +351,16 @@ a#link-main:active
 {
   z-index: 100;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 1px 0px 0px rgba(255, 255, 255, 0.05) inset, -1px 0px 0px rgba(255, 255, 255, 0.05) inset, 0px 1px 0px rgba(255, 255, 255, 0.1) inset;
-  position: relative;
+  position: absolute;
   left: -152%;
-  top: 350px;
+  top: 430px;
   padding: 13px 13px 12px 42px;
   font-size: 16px;
   text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.3);
   border: 1px solid #1C5380;
   background-position: 50% 50%;
+  color: #fff;
+  margin: auto;
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#027EAF), to(#023E6F)); /* Safari and Chrome support */
   background: -moz-linear-gradient(bottom center, #023E6F, #027EAF); /* Mozilla support */
   background: -o-linear-gradient(bottom center, #023E6F, #027EAF); /* Operasupport */
@@ -400,3 +409,203 @@ a#link-main:active
   height: 40px;
   background: url("/img/shared-assets.png") no-repeat scroll 4px -196px transparent;
 }
+
+#question-page
+{
+  background: url("/img/harvard.png");
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-repeat: no-repeat;
+  z-index: 50;
+  background-position: 50% 50%;
+}
+
+#page-outer
+{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 25%;
+  z-index: 950;
+}
+
+.content-wrapper
+{
+  padding: 56px 14px 15px;
+  position: relative;
+  margin: 0 auto;
+  min-height: 0px;
+}
+
+.content-main
+{
+  float: left;
+  margin: 0 10px;
+  border-radius: 5px 5px 0 0;
+  border-color: #BFE0EC !important;
+  position: absolute;
+  margin-left: 56px;
+}
+
+.home-question-box
+{
+  border-color: #BFE0EC !important;
+  padding: 10px 12px;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#55acee), to(#027EAF)); /* Safari and Chrome support */
+  background: -moz-linear-gradient(bottom center, #027EAF, #55acee); /* Mozilla support */
+  background: -o-linear-gradient(bottom center, #027EAF, #55acee); /* Operasupport */
+  background: linear-gradient(bottom center, #027EAF, #55acee); /* Standard support */
+  border-radius: 6px 6px 0 0;
+  position: absolute;
+}
+
+.new-task .question-content
+{
+  position: relative;
+  margin-bottom: 8px;
+  font-size: 12px;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+#ask-box
+{
+  font-size: 14px;
+  padding: 10px 6px;
+  display: block;
+  overflow-y: auto;
+  word-wrap: break-word;
+  border-color: #023E6F;
+  border: 0.5px solid;
+  resize: none;
+  min-height: 80px;
+  overflow: hidden;
+  text-shadow: none;
+  vertical-align: top;
+  width: 600px;
+  border-radius: 6px 6px 0px 0px;
+  text-align: left;
+  margin: 0;
+  outline: 0;
+  background-color: #fff;
+  -webkit-line-break: after-white-space;
+  direction: ltr;
+  unicode-bidi: embed;
+}
+
+.question-extras
+{
+  float: left;
+  top: 7px;
+  font-size: 14px;
+  position: relative;
+  border-radius: 4px;
+}
+
+.hide-completed
+{
+    display: inline-block;;
+    padding-left: 20px;
+    text-indent: -15px;
+    color: #fff;
+}
+
+
+.anonymous-blurb
+{
+    width: 13px;
+    height: 13px;
+    padding: 5px;
+    vertical-align: bottom;
+    position: relative;
+    top: 0px;
+    left: -20px;
+    *overflow: hidden;
+    float: left;
+}
+
+.ask-button
+{
+  float: right;
+}
+
+/* Styling for Ask button in Home. Based on twitter's tweett button */
+#question-submit
+{
+background-color: #023E6F;
+background-size: auto;
+border-bottom-color: rgba(0, 0, 0, 0);
+border-radius: 4px;
+border-bottom-style: solid;
+border-left-color: rgba(0, 0, 0, 0);
+border-left-style: solid;
+border-left-width: 0px;
+border-right-color: rgba(0, 0, 0, 0);
+border-right-style: solid;
+border-right-width: 0px;
+border-top-color: rgba(0, 0, 0, 0);
+border-top-style: solid;
+border-top-width: 0px;
+box-shadow: none;
+color: rgb(255, 255, 255);
+cursor: pointer;
+display: inline-block;
+font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+font-size: 15px;
+font-weight: bold;
+height: 30px;
+vertical-align: center;
+padding-bottom: 8px;
+padding-left: 17px;
+padding-right: 16px;
+padding-top: 4px;
+position: relative;
+text-align: center;
+width: 96px;
+}
+
+#question-submit:hover
+{
+  -webkit-stroke-width: 6px; /* Chrome and Safari support */
+  -webkit-stroke-color: #FFFFFF; /* Chrome and Safari support */
+  -webkit-fill-color: #FFFFFF; /* Chrome and Safari support */
+  -moz-stroke-width: 6px; /* Mozilla support */
+  -moz-stroke-color: #FFFFFF; /* Mozilla support */
+  -moz-fill-color: #FFFFFF; /* Mozilla support */
+  -o-stroke-width: 6px; /* Opera support */
+  -o-stroke-color: #FFFFFF; /* Opera support */
+  -o-fill-color: #FFFFFF; /* Opera support */
+  stroke-width: 6px; /* Standard support */
+  stroke-color: #FFFFFF; /* Standard support */
+  fill-color: #FFFFFF; /* Standard support */
+  text-shadow: 1px 0px 20px #FFFFFF;
+  color: #FFFFFF;
+}
+
+#question-submit:active
+{
+  background: #55acee;
+  outline: none;
+}
+
+.question-container
+{
+  position: absolute;
+  margin-left: 0px;
+  list-style: none;
+  display: block;
+  top: 198px;
+  left: 30px;
+}
+
+.question-items
+{
+  list-style: none;
+}
+
+.question-cascade
+{
+  border-bottom: 1px solid #e1e8ed;
+  width: 620px;
+}
+

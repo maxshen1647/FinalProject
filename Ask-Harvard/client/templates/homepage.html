@@ -1,27 +1,68 @@
-<template name="homepage">
+<!-- <template name="homepage">
   <body class="page-home">
-    <form class="new-task">
-      <div class="question-bar">
-        <div id="question-title-bar">
-          <div class="title-headline">Ask a Question</div>
-        </div>
-        <div id="question-loader">
-          <input id="ask-box" type="text" name="text" placeholder="Ask us a question!" />
-        </div>
-        <div>
-          <input id="question-submit" type="submit" value="ask"/>
-          <label id="post-options-border"><input id="ask-anonymously" class="anonymous-blurb" type="checkbox" checked="{{hideCompleted}}"/>Ask Anonymously</label>
-<!--           <input id="question-submit" type="submit" value="ask"/> -->
-        </div>    
-      </div>
-    </form>
+        <header>
+          <div id="question-bar" class="askbar">
+            <div id="askbar-inner">
+              <div class="container-ask">
+                <ul id="askbar-items" class="askbar-pull">
+                  <form class="new-task">
+                    <ul id="questions" class="ask-questions">
+                      <li class="active-questions">
+                        <input id="ask-box" type="text" name="text" placeholder="Ask us a question!" />
+                      </li>
+                      <li>
+                        <input id="question-submit" type="submit" value="ask"/>
+                      </li>
+                      <li>
+                        <label id="post-options"><input id="ask-anonymously" class="anonymous-blurb" type="checkbox" checked="{{hideCompleted}}"/>Ask Anonymously</label>
+                      </li>
+                    </ul>
+                  </form>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </header>
     <ul>
       {{#each tasks}}
         {{> task}}
       {{/each}}
     </ul>
-
-      </body>
+  </body>
 </template>
- 
-      
+ --><template name="homepage">
+  <body>
+    <div id="page-outer">
+      <div id="page-container" class="content-wrapper">
+        <div id="timeline" class="content-main">
+          <div class="home-question-box">
+            <form class="new-task">
+              <div class="question-content">
+                <textarea id="ask-box" type="text" name="text" placeholder="Ask us a question!"></textarea>
+            </div>
+              <div class="toolbar">
+                <div class="question-extras">
+                  <label class="hide-completed"><input id="ask-anonymously" class="anonymous-blurb" type="checkbox" checked="{{hideCompleted}}"/>Ask Anonymously</label>
+                </div>
+                <div class="ask-button">
+                  <input id="question-submit" type="submit" value="Ask"/>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="question-container"> <!-- stream-container -->
+          <div class="question-stream"> <!-- stream home-stream -->
+            <ul class="question-items"> <!-- stream-items -->
+              {{#each tasks}}
+                {{> task}}
+              {{/each}}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="question-page"></div>
+  </body>
+</template>
+
