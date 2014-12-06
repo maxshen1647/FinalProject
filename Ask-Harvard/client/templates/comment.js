@@ -5,7 +5,7 @@ Template.comment.helpers({
   },
   // returns the time of submission
   timestamp: function() {
-    return this.submitted.toString();
+    return this.submitted.toDateString();
   },
   // returns the status of the upvote button
   upvotedClass: function() {    
