@@ -1,0 +1,4 @@
+1. debug the delete button and the answer button
+2. go through the entire code and change everything to askharvard related names, commenting code as we go
+3. revise design doc and make user manual
+5. make video
