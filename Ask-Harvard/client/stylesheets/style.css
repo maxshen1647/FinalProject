@@ -419,6 +419,12 @@ a#link-main:active
   background-repeat: no-repeat;
   z-index: 50;
   background-position: 50% 50%;
+  overflow-x: hidden;
+}
+
+.homepage
+{
+overflow-x: hidden;
 }
 
 #page-outer
@@ -426,8 +432,8 @@ a#link-main:active
   height: 100%;
   width: 100%;
   position: absolute;
-  left: 25%;
   z-index: 950;
+  overflow-x: hidden;
 }
 
 .content-wrapper
@@ -436,6 +442,7 @@ a#link-main:active
   position: relative;
   margin: 0 auto;
   min-height: 0px;
+  left: 23%;
 }
 
 .content-main
@@ -458,6 +465,7 @@ a#link-main:active
   background: linear-gradient(bottom center, #027EAF, #55acee); /* Standard support */
   border-radius: 6px 6px 0 0;
   position: absolute;
+  overflow-x: hidden;
 }
 
 .new-task .question-content
@@ -466,6 +474,7 @@ a#link-main:active
   margin-bottom: 8px;
   font-size: 12px;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  overflow-x: hidden;
 }
 
 #ask-box
@@ -594,7 +603,7 @@ width: 96px;
   margin-left: 0px;
   list-style: none;
   display: block;
-  top: 198px;
+  top: 194px;
   left: 30px;
 }
 
@@ -605,7 +614,84 @@ width: 96px;
 
 .question-cascade
 {
-  border-bottom: 1px solid #e1e8ed;
-  width: 620px;
+  border: 1px solid #e1e8ed;
+  background-color: #fff;
+  width: 624px;
+  position: relative;
+  min-height: 51px;
+  padding-bottom: 9px;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 6px;
+  text-align: start;
+  border-spacing: 4px;
 }
 
+#upper-part
+{
+  border-bottom: 1px solid #e1e8ed;
+  padding-bottom: 5px;
+}
+
+#middle-part
+{
+  margin-top: -8px;
+  height: 50px;
+}
+
+#answer-link
+{
+  margin-top: -14px;
+  padding-top: 4px;
+  border-top: 1px solid #e1e8ed;
+  width: 595px;
+}
+
+.text
+{
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  vertical-align: top;
+}
+
+.delete
+{
+  background-color: #fff;
+  border-bottom-color: rgba(0, 0, 0, 0);
+  border-radius: 4px;
+  border-bottom-style: solid;
+  border-left-color: rgba(0, 0, 0, 0);
+  border-left-style: solid;
+  border-left-width: 0px;
+  border-right-color: rgba(0, 0, 0, 0);
+  border-right-style: solid;
+  border-right-width: 0px;
+  border-top-color: rgba(0, 0, 0, 0);
+  border-top-style: solid;
+  border-top-width: 0px;
+  box-shadow: none;
+  color: #ccd6dd;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  vertical-align: center;
+  position: relative;
+  text-align: center;
+  float: right;
+  transition: 0.4s;
+}
+
+.delete:hover
+{
+    border-radius: 4px;
+    background-color: #ccd6dd;
+    color: #fff;
+}
+
+.delete:active
+{
+  border-radius: 4px;
+  background-color: #027EAF;
+}
