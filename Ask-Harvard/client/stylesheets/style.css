@@ -299,6 +299,26 @@ a#link-main:active
     background: #025E8F;
 }
 
+/* Creates, aligns and stylizes bottom banner */
+#copyright
+{
+  z-index: 1000;
+  position: fixed;
+  width: 100%;
+  min-height: 16px;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-shadow: 0px 1px 14px 4px #000;
+  background: -moz-linear-gradient(bottom center, #023E6F, #027EAF); /* Mozilla support */
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#027EAF), to(#023E6F));
+  background-attachment: scroll;
+  bottom: -5px;
+  color: #fff;
+  text-align: center;
+  font-size: 11px;
+  vertical-align: middle;
+}
+
 /* Position and width for text and button wrap in Main page */
 .wrap
 {
@@ -332,7 +352,7 @@ a#link-main:active
   top: 0px;
   left: 0px;
   right: 0px;
-  background-image: url("/img/john-harvard1.png");
+  background: url("/img/john-harvard1.jpg");
   background-position: 50% 40px;
   background-size: cover;
 }
@@ -410,6 +430,7 @@ a#link-main:active
   background: url("/img/shared-assets.png") no-repeat scroll 4px -196px transparent;
 }
 
+/* Sets properties of background picture in Home */
 #question-page
 {
   background: url("/img/harvard.png");
@@ -422,11 +443,13 @@ a#link-main:active
   overflow-x: hidden;
 }
 
+/* Sets overflow properties in Home */
 .homepage
 {
 overflow-x: hidden;
 }
 
+/* Sets width and height of Home page */
 #page-outer
 {
   height: 100%;
@@ -436,6 +459,7 @@ overflow-x: hidden;
   overflow-x: hidden;
 }
 
+/* Sets the padding and position of the canvas that wraps all text boxes within Home */
 .content-wrapper
 {
   padding: 56px 14px 15px;
@@ -445,6 +469,7 @@ overflow-x: hidden;
   left: 23%;
 }
 
+/* Sets radius and position of question box */
 .content-main
 {
   float: left;
@@ -455,6 +480,7 @@ overflow-x: hidden;
   margin-left: 56px;
 }
 
+/* Sets border, color and overflow of whole question box */
 .home-question-box
 {
   border-color: #BFE0EC !important;
@@ -468,6 +494,7 @@ overflow-x: hidden;
   overflow-x: hidden;
 }
 
+/* Sets font, margins and overflow in text area box */
 .new-task .question-content
 {
   position: relative;
@@ -477,6 +504,7 @@ overflow-x: hidden;
   overflow-x: hidden;
 }
 
+/* Sets format, position and size of text area in ask box */
 #ask-box
 {
   font-size: 14px;
@@ -502,6 +530,7 @@ overflow-x: hidden;
   unicode-bidi: embed;
 }
 
+/* Sets ask anonymously checkbox and label to the left of the ask-questions box */
 .question-extras
 {
   float: left;
@@ -511,6 +540,7 @@ overflow-x: hidden;
   border-radius: 4px;
 }
 
+/* Sets padding and indentation for ask anonymously feature in Home */
 .hide-completed
 {
     display: inline-block;;
@@ -519,7 +549,7 @@ overflow-x: hidden;
     color: #fff;
 }
 
-
+/* Sets format for Ask Anonymously label */
 .anonymous-blurb
 {
     width: 13px;
@@ -533,6 +563,7 @@ overflow-x: hidden;
     float: left;
 }
 
+/* Sets position of ask button within the ask-question box */
 .ask-button
 {
   float: right;
@@ -573,6 +604,7 @@ text-align: center;
 width: 96px;
 }
 
+/* Adds glow and changes background of ask button on hover */
 #question-submit:hover
 {
   -webkit-stroke-width: 6px; /* Chrome and Safari support */
@@ -591,12 +623,14 @@ width: 96px;
   color: #FFFFFF;
 }
 
+/* Changes background of ask button on click */
 #question-submit:active
 {
   background: #55acee;
   outline: none;
 }
 
+/* Sets position in screen for question boxes */
 .question-container
 {
   position: absolute;
@@ -607,13 +641,16 @@ width: 96px;
   left: 30px;
 }
 
+/* Eliminates list tag in question boxes */
 .question-items
 {
   list-style: none;
 }
 
+/* Question box formatting */
 .question-cascade
 {
+  z-index: 100;
   border: 1px solid #e1e8ed;
   background-color: #fff;
   width: 624px;
@@ -627,26 +664,33 @@ width: 96px;
   border-spacing: 4px;
 }
 
+/* Margins for name subsection inside question box */
 #upper-part
 {
+  z-index: 902;
   border-bottom: 1px solid #e1e8ed;
   padding-bottom: 5px;
 }
 
+/* Margins for text subsection inside question box */
 #middle-part
 {
   margin-top: -8px;
-  height: 50px;
+  min-height: 40px;
+  height: auto;
 }
 
+/* Margins for answer subsection inside question box */
 #answer-link
 {
   margin-top: -14px;
   padding-top: 4px;
   border-top: 1px solid #e1e8ed;
   width: 595px;
+  margin-bottom: 22px;
 }
 
+/* Text-box formatting for questions */
 .text
 {
   white-space: pre-wrap;
@@ -654,6 +698,7 @@ width: 96px;
   vertical-align: top;
 }
 
+/* Basic styling for delete button */
 .delete
 {
   background-color: #fff;
@@ -683,6 +728,7 @@ width: 96px;
   transition: 0.4s;
 }
 
+/* Changes background of delete button on mouse hover */
 .delete:hover
 {
     border-radius: 4px;
@@ -690,8 +736,52 @@ width: 96px;
     color: #fff;
 }
 
+/* Changes background of delete button when clicked */
 .delete:active
 {
   border-radius: 4px;
   background-color: #027EAF;
+}
+
+/* Formatting for answer button */
+.answers-button
+{
+  background-color: #fff;
+  border-radius: 6px;
+  border-color: transparent;
+  color: #23527c;;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  vertical-align: center;
+  position: relative;
+  text-align: center;
+  float: left;
+  left: -8px;
+  height: 25px;
+  padding-right: 2px;
+  padding-left: 2px;
+  margin-left: 5px;
+  margin-top: -1px;
+  padding-top: 2px;
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+/* Changes answers button background on hover */
+.answers-button:hover
+{
+  background: #55acee;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Changes answers button background when clicked */
+.answers-button:active
+{
+  background: #023E6F;
+  color: #fff;
+  text-decoration: none;
 }

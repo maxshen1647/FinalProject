@@ -7,11 +7,10 @@
     <br>
     <div id="middle-part">
       <span class="text">{{text}}</span>    
-      {{#if harvardStudent}}<a href="{{pathFor 'answerpage'}}" class="discuss btn btn-default">Answer</a>{{/if}}
     </div>
     <br>
     <div  id="answer-link">
-      <a href="{{pathFor 'answerpage'}}">({{commentsCount}} answers)</a>
+      <a class="answers-button" href="{{pathFor 'answerpage'}}">{{commentsCount}} answers</a>
     </div>
   </li>
 </template>
