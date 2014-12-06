@@ -1,0 +1,46 @@
+Design Document for askHarvard
+Max Shen (gshen@college.harvard.edu) 
+Lucas Urbisaia (lucasurbisaia@college.harvard.edu)
+
+1. Why did we choose Meteor?
+	As you can see from our source code and site url, we chose to build our site with Meteor, a relatively new node.js based platform. We chose Meteor due to a couple of reasons:
+		- it allows us to use javascript for both client and server sides
+		- it is automatically packaged with MongoDB, so we don't even have to configure a database manually
+		- shallow learning curve, because there's no need to learn a new language like Ruby
+		- functionalities such as username password login and facebook login can be added with a literally a single line of code
+		- the website automatically detects changes in your code and instantly updates to reflect that
+		- lots of built in security features such as hashed passwords, protection against CSRF attacks, HTML-escaped user input, and a full-database encryption layer
+
+2. How We Got Started
+	After watching Roger's seminar on Meteor, we realized that the source code for the example website that was handed out in the seminar could serve as a base for our website. The example was a To-Do List web app that had a single page where users can log in, input tasks via a text box, and have those tasks displayed in a list. This was a good foundation to start with, because our basic functionality was similar- users can log in, ask questions via a text box, and those questions will be displayed on the home page. 
+
+3. Implementation of Features
+	3.1 Adapting the example website
+		First we changed all the HTML headings to what was relevant to our site. We then took out the function that allowed users to hide completed tasks, and the checkbox next to each task. We also changed the task counter to a question counter that counted the total number of questions submitted. Then we organized the directories into the folders client, server, lib (code here is accessible to both server and client; code that interacts with the database lives here), and public (images). 
+	3.2 Password login and Email verification 
+		By adding the accounts-password package, we had full login functionality with username, email, and password, and even a forgot password feature. All we had to do was choose the location of {{> loginButtons}}. To prevent users from registering with fake, or even worse, someone else's email, we added this feature using the pre built email  verification functions of meteor, and setting up the smtp settings in the server side code (server/smtp.js). All emails will be sent from a newly created gmail account, askharvard@gmail.com. We also customized the verification email by changing the From, Subject, and Text fields of the object Accounts.emailTemplates
+	3.2 The Ask Anonymously function
+		A key feature of Q&A websites like ask.fm and formspring is the ability to ask anonymous questions. We implemented this feature by selecting what types of imformation to store in our questions database depending on the status of the Ask Anonymously checkbox. If it was checked, the question along with the timestamp and Id of the logged in user (returned by Meteor.userId(), a convenient feature of meteor) will be inserted into the database via meteor's insert function (similar to query in php). If it was not checked, the username of the logged in user (returned by Meteor.user().username) would be stored as well, and appear beside the question on the homepage. In addition, n alert would pop up if someone tried to ask a question without logging in (Meteor.user() returns null when no one is logged in).
+	3.3 Creating multiple webpages and routing them
+		We obviously want our website to be more than just one page, and to do that we needed to make use of a Meteor tool called Iron Router. Basically, you have a router.js file in the lib directory where you code in various routes that assign different html template files to different urls. We wanted to have a mainpage and a homepage, so we created mainpage.html and homepage.html and "routed" them to the urls '/' and '/homepage'. In addition, we wanted to have a navigation bar (with our logo and buttons for sign in, homepage, and the questions count) that would stay constant no matter which page we were on. Luckily meteor had a function for that as well. We created a file called layout.html that had the code for our navigation bar, and added that to the layoutTemplate field of the Router.configure object in router.js. In layout.html below the navigation bar, there is a {{> yield}} placeholder, which in meteor means the html template (in our case mainpage.html or homepage.html) that your url is routing to will load here. 
+	3.4 Amswering questions
+		To allow users to answer questions, we created /lib/collections/answers.js in which we initialized a new database to store the answers. Then, we added an "Answer" button in the template for questions (in question.html). The button would be a link that takes you to another page to answer. We added a special route in router.js that routes this link to '/answer/:_id' in which :_id is the unique id of the question that was clicked on. This way we would have a unique url for each question. Next, we went about creating a whole bunch of html templates and their corresponding js files:
+
+			Answerpage.html: template for the page that the user is routed to after clicking the Answer button. This file has 3 placeholders- {{> question}} displays the one question that was clicked on, {{#each answers}}{{> answer}}{{each}} shows a list of any existing answers, and {{> answerSubmit}} is the form to submit a new answer.
+
+			Answerpage.js: uses the find() function to search through the database for all answers that have the same questionId as the current question (thus finding all existing answers to the question) and passes it to {{#each answers}}.
+
+			Answer.html: the template for each individual answer in the list (replaces the {{> answer}}. Displays the answerer's username, timstamp, and has a button to for deleting the answer.
+
+			Answer.js: has a helper function that passes the timestamp to Answer.html to display. Also has an event handler for the delete button that removes the answer from the database when clicked.
+
+			answerSubmit.html: template for the form that goes in the placeholder {{> answerSubmit}}. 
+
+			answerSubmit.js: has an event handler for the submission of the answer form. When the form is submitted, the code will check that the answer is not blank, and then call a meteor method (which we will write) the insert that answer into the answers database. After insertion, the answer will show up immediately on the page because the find() function in answerpage.js will instantly find it in the database and pass it to answerpage.html.
+
+		Next we have to actually
+
+	permissions
+
+
+

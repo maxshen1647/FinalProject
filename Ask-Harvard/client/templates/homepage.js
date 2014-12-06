@@ -29,6 +29,7 @@ Template.homepage.helpers({
           text: text,
           createdAt: new Date(),
           userId: Meteor.userId(), // _id of logged in user
+          username: "Anonymous"
         });  
       } else {
         Tasks.insert({
