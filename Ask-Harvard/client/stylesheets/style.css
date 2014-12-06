@@ -653,7 +653,7 @@ width: 96px;
   z-index: 100;
   border: 1px solid #e1e8ed;
   background-color: #fff;
-  width: 624px;
+  width: 21.7%; 
   position: relative;
   min-height: 51px;
   padding-bottom: 9px;
@@ -662,6 +662,7 @@ width: 96px;
   padding-top: 6px;
   text-align: start;
   border-spacing: 4px;
+  list-style: none;
 }
 
 /* Margins for name subsection inside question box */
@@ -784,4 +785,25 @@ width: 96px;
   background: #023E6F;
   color: #fff;
   text-decoration: none;
+}
+
+#answer-page-content
+{
+  height: auto;
+  position: absolute;
+  z-index: 950;
+  overflow-x: hidden;
+  left: 29%;
+  top: 60px;
+}
+
+#answer-page-background
+{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background: url("/img/answer-background.jpg");
+  background-position: 50% 50%;
+  z-index: 50;
+  overflow-x: hidden;
 }
