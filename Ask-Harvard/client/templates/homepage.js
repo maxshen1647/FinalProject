@@ -20,7 +20,7 @@ Template.homepage.helpers({
       if (text == "")
         return false;
 
-      // if not logged in, display alert. if anon box is checked, do not acquire username
+      // if not logged in, display alert. if anon box is checked, log username as anon
       // insert question into database
       if (Meteor.user() == null){
       alert('Please sign in or register first. Thanks!');
@@ -29,7 +29,7 @@ Template.homepage.helpers({
           text: text,
           createdAt: new Date(),
           userId: Meteor.userId(), // _id of logged in user
-          username: "Anonymous"
+          username: "Anonymous" // logs the username as anonymous
         });  
       } else {
         Tasks.insert({
