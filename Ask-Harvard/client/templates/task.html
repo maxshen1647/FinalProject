@@ -1,10 +1,17 @@
 <template name="task">
   <li class="question-cascade">
-    {{#if ownPost}}<button class="delete">&times;</button>{{/if}}
-    <span class="signature"><strong>{{username}}</strong></span>
+    <div id="upper-part">
+	    {{#if ownPost}}<button class="delete">&times;</button>{{/if}}
+	    <span class="signature"><strong>{{username}}:</strong></span>
+    </div>
     <br>
-    <span class="text">{{text}}</span>    
-    {{#if harvardStudent}}<a href="{{pathFor 'answerpage'}}" class="discuss btn btn-default">Answer</a>{{/if}}
-    <a href="{{pathFor 'answerpage'}}">({{commentsCount}} answers)</a>
+    <div id="middle-part">
+      <span class="text">{{text}}</span>    
+      {{#if harvardStudent}}<a href="{{pathFor 'answerpage'}}" class="discuss btn btn-default">Answer</a>{{/if}}
+    </div>
+    <br>
+    <div  id="answer-link">
+      <a href="{{pathFor 'answerpage'}}">({{commentsCount}} answers)</a>
+    </div>
   </li>
 </template>
