@@ -326,21 +326,17 @@ a#link-main:active
   position: relative;
   width: 880px;
   margin-top: 0%;
+  height: 100%;
 
 }
 
 /* Styling for root page in Main */
-.root
+/*.root
 {
   height: 100%;
-  min-width: 320px;
-}
-
-/* Adds minimum height to text-page inside Main page */
-.page-in-root
-{
-  min-height: 600px;
-}
+  width: 100%;
+  position: absolute;
+}*/
 
 /* Styling for Main page background */
 #main-bg
@@ -360,20 +356,29 @@ a#link-main:active
 /* Adds margin and position for Ask Now button */
 .content
 {
-  float: right;
-  position: inherit;
-  width: 250px;
+  /*float: right;*/
+/*  position: absolute;
+  width: 100%;
+  height: 100%;
   margin-top: 2%;
+  z-index: 900;*/
+  z-index: 950;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
 }
 
 /* Styling for Ask Now button */
-.content .access-homepage
+.access-homepage
 {
-  z-index: 100;
+  z-index: 950;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 1px 0px 0px rgba(255, 255, 255, 0.05) inset, -1px 0px 0px rgba(255, 255, 255, 0.05) inset, 0px 1px 0px rgba(255, 255, 255, 0.1) inset;
-  position: absolute;
-  left: -152%;
-  top: 430px;
+  position: relative;
+  left: 17.2%;
+  top: 76%;
   padding: 13px 13px 12px 42px;
   font-size: 16px;
   text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.3);
@@ -441,6 +446,7 @@ a#link-main:active
   z-index: 50;
   background-position: 50% 50%;
   overflow-x: hidden;
+  background-size: cover;
 }
 
 /* Sets overflow properties in Home */
@@ -653,7 +659,7 @@ width: 96px;
   z-index: 100;
   border: 1px solid #e1e8ed;
   background-color: #fff;
-  width: 21.7%; 
+  width: 624px; 
   position: relative;
   min-height: 51px;
   padding-bottom: 9px;
@@ -704,7 +710,6 @@ width: 96px;
 {
   background-color: #fff;
   border-bottom-color: rgba(0, 0, 0, 0);
-  border-radius: 4px;
   border-bottom-style: solid;
   border-left-color: rgba(0, 0, 0, 0);
   border-left-style: solid;
@@ -726,6 +731,7 @@ width: 96px;
   position: relative;
   text-align: center;
   float: right;
+  margin-top: 1px;
   transition: 0.4s;
 }
 
@@ -750,7 +756,7 @@ width: 96px;
   background-color: #fff;
   border-radius: 6px;
   border-color: transparent;
-  color: #23527c;;
+  color: #23527c;
   cursor: pointer;
   display: inline-block;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -787,16 +793,34 @@ width: 96px;
   text-decoration: none;
 }
 
-#answer-page-content
+/* Sets the display of contents in the answer page */
+.answer-page
 {
   height: auto;
+  width: 100%;
   position: absolute;
   z-index: 950;
   overflow-x: hidden;
-  left: 29%;
   top: 60px;
 }
 
+/* Sets all contents to the middle of the page */
+.answer-page-content
+{
+  position: relative;
+  float: left;
+  left: 28%;
+}
+
+/* Sets the width of the question frame */
+.question-frame
+{
+  border: 3px solid rgb(191, 224, 236);
+  border-radius: 6px;
+  width: 630px;
+}
+
+/* sETS THE BACKGROUND IN THE ANSWER PAGE */
 #answer-page-background
 {
   height: 100%;
@@ -806,4 +830,162 @@ width: 96px;
   background-position: 50% 50%;
   z-index: 50;
   overflow-x: hidden;
+  background-size: cover;
+}
+
+/* Styling for the box that contains the answer list */
+.comment-stream
+{
+  z-index: 100;
+  border: 1px solid #027EAF;
+  background-color: #027EAF;
+  width: 624px;
+  top: 10px;
+  position: relative;
+  min-height: 51px;
+  padding-bottom: 6px;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 6px;
+  text-align: start;
+  border-spacing: 4px;
+  list-style: none;
+  word-wrap: break-word;
+  border-radius: 6px;
+  left: 2px;
+} 
+
+/* Padding, alignment and background for the answer list */
+.answers-list
+{
+  border: 1px solid #e1e8ed;
+  background-color: #fff;
+  width: 612px; 
+  position: relative;
+  padding-bottom: 9px;
+  padding-left: 12px;
+  padding-right: 12px;
+  text-align: start;
+  border-spacing: 4px;
+  list-style: none;
+  margin-left: -7px;
+  height: auto;
+}
+
+#top-answered-box
+{
+  border-bottom: 1px solid #e1e8ed;
+  padding-bottom: 3px;
+}
+
+/* Upvote button format */
+.upvote
+{
+  background-color: transparent;
+  border-color: transparent;
+  color: #ccd6dd;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  vertical-align: center;
+  position: relative;
+  top: -2px;
+  right: 1px;
+  text-align: center;
+  float: right;
+  padding-bottom: 3px;
+  padding-right: 3px;
+  padding-left: 3px;
+  padding-top: 3px;
+  transition: 0.4s;
+}
+
+/* Format of upvote button on mouse hover */
+.upvote:hover
+{
+  color: #204d74;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+/* Format for on-click upvote button */
+.upvote:active
+{
+  background-color: #027EAF;
+  border-color: #027EAF;
+  color: #fff;
+}
+
+/* Formatting for clicked upvoted button */
+.upvote.btn.btn-default.disabled
+{
+  background-color: transparent;
+  border-color: transparent;
+  color: #23527c;
+}
+
+/* Font size for author */
+.author
+{
+  font-size: 16px;
+}
+
+/* Font and color for date of submission */
+.date
+{
+  font-size: 12px;
+  color: #bcc6cd;
+}
+
+/* Sets the width of the form that contains the answer box */
+.form-group
+{
+  top: 4px;
+  width: 624px;
+}
+
+/* Sets the margins of the answer label */
+.answer-box-label
+{
+  margin-left: 5px;
+  margin-top: 15px;
+}
+
+/* Sets format for answer button */
+#submit-answer-button
+{
+  margin-bottom: 60px;
+  background-color: #027EAF;;
+background-size: auto;
+border-bottom-color: rgba(0, 0, 0, 0);
+border-radius: 4px;
+border-bottom-style: solid;
+border-left-color: rgba(0, 0, 0, 0);
+border-left-style: solid;
+border-left-width: 0px;
+border-right-color: rgba(0, 0, 0, 0);
+border-right-style: solid;
+border-right-width: 0px;
+border-top-color: rgba(0, 0, 0, 0);
+border-top-style: solid;
+border-top-width: 0px;
+box-shadow: none;
+color: rgb(255, 255, 255);
+cursor: pointer;
+}
+
+/* Sets margins in the answer box */
+.comment-form
+{
+    margin-top: 30px;
+    height: 190px;
+    margin-left: 3px;
+}
+
+/* Disables resize in the answer box */
+.form-control
+{
+  resize: none;
 }

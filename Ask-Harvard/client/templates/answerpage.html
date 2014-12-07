@@ -1,18 +1,22 @@
 <template name="answerpage">
-  <body class="answer-page">
-    <div id="answer-page-content">
-      {{> task}}
-      <ul>    
-      	{{#each comments}}      
-      		{{> comment}}    
-      	{{/each}}  
-      </ul>
-      
-      {{#if harvardStudent}}    
-        {{> commentSubmit}}  
-      {{else}}    
-        <p>Please log in with a Harvard email to answer.</p>  
-      {{/if}}
+  <body>
+    <div class="answer-page">
+      <div class="answer-page-content">
+        <div class="question-frame">
+          {{> task}}
+        </div>
+        <ul class="comment-stream">    
+        	{{#each comments}}      
+        		{{> comment}}    
+        	{{/each}}  
+        </ul>
+        
+        {{#if harvardStudent}}    
+          {{> commentSubmit}}  
+        {{else}}    
+          <p>Please log in with a Harvard email to answer.</p>  
+        {{/if}}
+      </div>
     </div>
     <div id="answer-page-background"></div>
 </body>
