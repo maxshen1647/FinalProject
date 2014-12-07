@@ -1,10 +1,10 @@
-<template name="answer">
-  <li class="answers-list">
-    <h4 id="top-answered-box">
+<template name="comment">
+  <li>
+    <h4>
       <span class="author">{{author}}</span>
-      <span class="date">on {{timestamp}}:</span>
-      {{#if ownAnswer}}<button class="delete">&times;</button>{{/if}}
-      <button href="#" class="upvote btn btn-default {{upvotedClass}}">{{votes}}⬆</button>
+      <span class="date">on {{timestamp}}</span>
+      {{#if ownComment}}<button class="delete">&times;</button>{{/if}}
+      <a href="#" class="upvote btn btn-default {{upvotedClass}}">{{votes}}⬆</a>
     </h4>
     <p>{{body}}</p>
   </li>

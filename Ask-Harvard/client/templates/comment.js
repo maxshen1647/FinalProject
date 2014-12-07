@@ -1,6 +1,6 @@
-Template.answer.helpers({
+Template.comment.helpers({
   // checks whether the answer belongs to current user
-  ownAnswer: function(){
+  ownComment: function(){
     return this.userId === Meteor.userId();
   },
   // returns the time of submission
@@ -19,9 +19,9 @@ Template.answer.helpers({
 });
 
 // remove comment if clicked
-Template.answer.events({
+Template.comment.events({
   "click .delete": function () {
-    Answers.remove(this._id);
+    Comments.remove(this._id);
   },
   "click .upvotable": function(e) {   
     e.preventDefault();    
