@@ -1,7 +1,7 @@
 Template.answerpage.helpers({  
 	// returns all of the comments on the current post
-	answers: function() {    
-		return Answers.find({questionId: this._id});  
+	comments: function() {    
+		return Comments.find({postId: this._id});  
 	},
 	// checks whether current user is registered with a college.harvard.edu email
  	harvardStudent: function(){

@@ -1,19 +1,19 @@
 //functions that do work on the homepage.html
 Template.homepage.helpers({
-    questions: function () {
-      // return all of the questions
-      return Questions.find({}, {sort: {createdAt: -1}});
+    tasks: function () {
+      // return all of the tasks
+      return Tasks.find({}, {sort: {createdAt: -1}});
     },
     // returns the status of the anon inquiry checkbox
-    askAnonymously: function () {
-      return Session.get("askAnonymously");
+    hideCompleted: function () {
+      return Session.get("hideCompleted");
     }
   });
 
   // events that happen in homepage.html
   Template.homepage.events({
-     // This function is called when the new question form is submitted
-    "submit .new-question": function (event) {
+     // This function is called when the new task form is submitted
+    "submit .new-task": function (event) {
       var text = event.target.text.value;
 
       //check for blank input
@@ -32,7 +32,7 @@ Template.homepage.helpers({
           username: "Anonymous" // logs the username as anonymous
         });  
       } else {
-        Questions.insert({
+        Tasks.insert({
           text: text,
           createdAt: new Date(),
           userId: Meteor.userId(), // _id of logged in user
@@ -47,8 +47,8 @@ Template.homepage.helpers({
       return false;
     },
     // when anonymous box is is checked/unchecked, change the session variable
-    "change .ask-anonymously input": function (event) {
-      Session.set("askAnonymously", event.target.checked);
+    "change .hide-completed input": function (event) {
+      Session.set("hideCompleted", event.target.checked);
     }
   });
 

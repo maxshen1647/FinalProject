@@ -495,7 +495,7 @@ overflow-x: hidden;
 }
 
 /* Sets font, margins and overflow in text area box */
-.new-question .question-content
+.new-task .question-content
 {
   position: relative;
   margin-bottom: 8px;
@@ -541,7 +541,7 @@ overflow-x: hidden;
 }
 
 /* Sets padding and indentation for ask anonymously feature in Home */
-.ask-anonymously
+.hide-completed
 {
     display: inline-block;;
     padding-left: 20px;
