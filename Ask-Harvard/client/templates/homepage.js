@@ -24,7 +24,7 @@ Template.homepage.helpers({
       // insert question into database
       if (Meteor.user() == null){
       alert('Please sign in or register first. Thanks!');
-      } else if (Session.get("askAnonymously")){
+      } else if (Session.get("hideCompleted")){
         Questions.insert({
           text: text,
           createdAt: new Date(),
