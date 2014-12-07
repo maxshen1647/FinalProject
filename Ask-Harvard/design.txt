@@ -1,6 +1,7 @@
 Design Document for askHarvard
 Max Shen (gshen@college.harvard.edu) 
 Lucas Urbisaia (lucasurbisaia@college.harvard.edu)
+ask-harvard.meteor.com
 
 1. Why did we choose Meteor?
 	As you can see from our source code and site url, we chose to build our site with Meteor, a relatively new node.js based platform. We chose Meteor due to a couple of reasons:
@@ -55,8 +56,13 @@ Lucas Urbisaia (lucasurbisaia@college.harvard.edu)
 		In addition, we only want users to delete their own questions and answers, not other people's so we wrote helper functions called ownQuestion in question.js and ownAnswer in answer.js. Thesse functions simply checked if the id of the current logged in user mathed the userid that was stored in the question/answer, telling us if it belonged to the user. This allows us to use ((#if ownQuestion)) and ((#if ownAnswer)) in question.html and answer.html to hide the delete buttons if the question/answer didn't belong to the user. 
 
 		Last but not least, we wrote a helper function called upvotedClass in comment.js that checked two things: if the user was logged in, and whether the username was already stored inside upvoters[]. This allows us to display a disabled version of the upvote button using {{upvotedClass}} inside the html tag of the upvote button. Although this feature is redundant with the check that is performed on the server side in the upvote method, it is better user interface to have a visual cue.
-
-	talk about insecure?
-
+4. Style Decisions
+	HTML:
+	On a cursory level, the base layout for our program comes from bootstrap. Although we did not make heavy use of its functionalities, we choose to use twitter bootstrap because of the browser compatibility features it provides.
+	In terms of the design itself, our html structure follows the structures implemented by Facebook, Twitter and Askfm. Specifically, we noticed that all of these sites assign a class to each element, and subsequently group elements into class groups. This mechanism offers both control on a group of elements and minute manipulation on the aesthtics of any given object. To this end, we divided the mainpage.html, homepage.html and answerpage.html into a background and body id. The background id always loads the background image, and enables the posterior manipulation of its format by means of the id. The body ID holds all the remaining objects, each of which is assigned to a class depending on nearby objects.
+	CSS:
+	We chose to consolidate our design into a single stylesheet, since our ID and class system offers precise control on the objects we want to manipulate. The stylesheet is ordered to represent the overall flow of the website. It contains the formatting for the Main Page first, the formatting for the Home Page second and the formatting of the Answer Page third. 
+	We included cross-browser support by means of -webkit-, -moz- and -o- tags; however, we did not add mobile browser compatibility.
+	
 
 

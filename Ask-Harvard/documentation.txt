@@ -1,9 +1,9 @@
 Documentation
 Lucas Urbisaia (lucasurbisaia@college.harvard.edu)
 Max Shen (gshen@college.harvard.edu)
-http://askharvard.meteor.com
+http://ask-harvard.meteor.com
 
-To use askHarvard, simply visit http://askharvard.meteor.com in Firefox or Chrome. (Unfortunately our CSS gets a bit wonky in Internet Explorer, but who uses that nowadays anyway...) If you would like to set up the site on localhost, see instructions at the end.
+To use askHarvard, simply visit http://ask-harvard.meteor.com in Firefox or Chrome. (Unfortunately our CSS gets a bit wonky in Internet Explorer, but who uses that nowadays anyway...) If you would like to set up the site on localhost, see instructions at the end.
 
 Using the Website
 	Mainpage
