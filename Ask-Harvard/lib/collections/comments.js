@@ -1,8 +1,8 @@
 // Start new mongo database for comments
-Comments = new Mongo.Collection('comments');
+Answers = new Mongo.Collection('answers');
 
 //allows removal of comments if logged in
-Comments.allow({  
+Answers.allow({  
   remove: function(userId, doc) {    
   // only allow deleting if you are logged in    
     return !! userId;
@@ -11,32 +11,32 @@ Comments.allow({
 
 //insert comment when method is called in the client side
 Meteor.methods({  
-	commentInsert: function(commentAttributes) {    
+	answerInsert: function(answerAttributes) {    
 		check(this.userId, String);    
-		check(commentAttributes, {      
-			postId: String,      
+		check(answerAttributes, {      
+			questionId: String,      
 			body: String    
 		});    
 		var user = Meteor.user();    
-		var post = Tasks.findOne(commentAttributes.postId);    
-		if (!post)      
+		var question = Tasks.findOne(answerAttributes.postId);    
+		if (!question)      
 			alert('You must answer a question');    
-		comment = _.extend(commentAttributes, {      
+		answer = _.extend(answerAttributes, {      
 			userId: user._id,      
 			author: user.username,      
 			submitted: new Date(),
 			upvoters: [],
 			votes: 0    
 		});    
-		return Comments.insert(comment);  
+		return Answers.insert(answer);  
 	},
 
-	upvote: function(postId) {
+	upvote: function(questionId) {
 		check(this.userId, String); // produces error in console
-		check(postId, String);
+		check(questionId, String);
     
-        var affected = Comments.update({      
-          _id: postId,       
+        var affected = Answers.update({      
+          _id: questionId,       
           upvoters: {$ne: this.userId}    
         }, {      
           $addToSet: {upvoters: this.userId},      

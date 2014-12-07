@@ -1,19 +1,19 @@
 // remove task if clicked
-Template.task.events({
+Template.question.events({
   "click .delete": function () {
-    Tasks.remove(this._id);
-    Comments.remove({postId: this._id}); //doesnt work !?!?!
+    Questions.remove(this._id);
+    Answers.remove({questionId: this._id}); //doesnt work !?!?!
   }
 });
 
 
-Template.task.helpers({
+Template.question.helpers({
   // checks whether post belongs to the current user
-  ownPost: function(){
+  ownQuestion: function(){
     return this.userId === Meteor.userId();
   },
   // counts the number of answers on the current question
   commentsCount: function() {   
-  	return Comments.find({postId: this._id}).count();  
+  	return Answers.find({questionId: this._id}).count();  
   }
 });

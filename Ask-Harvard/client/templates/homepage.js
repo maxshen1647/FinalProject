@@ -1,8 +1,8 @@
 //functions that do work on the homepage.html
 Template.homepage.helpers({
-    tasks: function () {
+    questions: function () {
       // return all of the tasks
-      return Tasks.find({}, {sort: {createdAt: -1}});
+      return Questions.find({}, {sort: {createdAt: -1}});
     },
     // returns the status of the anon inquiry checkbox
     hideCompleted: function () {
@@ -32,7 +32,7 @@ Template.homepage.helpers({
           username: "Anonymous" // logs the username as anonymous
         });  
       } else {
-        Tasks.insert({
+        Questions.insert({
           text: text,
           createdAt: new Date(),
           userId: Meteor.userId(), // _id of logged in user

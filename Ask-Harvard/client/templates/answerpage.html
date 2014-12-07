@@ -3,16 +3,16 @@
     <div class="answer-page">
       <div class="answer-page-content">
         <div class="question-frame">
-          {{> task}}
+          {{> question}}
         </div>
         <ul class="comment-stream">    
-        	{{#each comments}}      
-        		{{> comment}}    
+        	{{#each answers}}      
+        		{{> answer}}    
         	{{/each}}  
         </ul>
         
         {{#if harvardStudent}}    
-          {{> commentSubmit}}  
+          {{> answerSubmit}}  
         {{else}}    
           <p>Please log in with a Harvard email to answer.</p>  
         {{/if}}

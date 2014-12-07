@@ -8,14 +8,14 @@ Router.configure({
   // redirects to notFound.html if user enters invalid url
   notFoundTemplate: 'notFound',
   // allows client to obtain data from the main database
-  waitOn: function() { return [Meteor.subscribe('Tasks'), Meteor.subscribe('Comments')];}
+  waitOn: function() { return [Meteor.subscribe('Questions'), Meteor.subscribe('Answers')];}
 });
 
 Router.route('/', {name: 'mainpage'});
 Router.route('/homepage', {name: 'homepage'});
 Router.route('/answer/:_id', {  
 	name: 'answerpage',
-	data: function() { return Tasks.findOne(this.params._id); }
+	data: function() { return Questions.findOne(this.params._id); }
 });
 
 
