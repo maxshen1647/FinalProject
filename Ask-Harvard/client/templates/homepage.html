@@ -4,13 +4,13 @@
       <div id="page-container" class="content-wrapper">
         <div id="timeline" class="content-main">
           <div class="home-question-box">
-            <form class="new-task">
+            <form class="new-question">
               <div class="question-content">
                 <textarea id="ask-box" type="text" name="text" placeholder="Ask us a question!"></textarea>
             </div>
               <div class="toolbar">
                 <div class="question-extras">
-                  <label class="hide-completed"><input id="ask-anonymously" class="anonymous-blurb" type="checkbox" checked="{{hideCompleted}}"/>Ask Anonymously</label>
+                  <label class="ask-anonymously"><input id="ask-anonymously" class="anonymous-blurb" type="checkbox" checked="{{askAnonymously}}"/>Ask Anonymously</label>
                 </div>
                 <div class="ask-button">
                   <input id="question-submit" type="submit" value="Ask"/>
@@ -22,8 +22,8 @@
         <div class="question-container"> <!-- stream-container -->
           <div class="question-stream"> <!-- stream home-stream -->
             <ul class="question-items"> <!-- stream-items -->
-              {{#each tasks}}
-                {{> task}}
+              {{#each questions}}
+                {{> question}}
               {{/each}}
             </ul>
           </div>

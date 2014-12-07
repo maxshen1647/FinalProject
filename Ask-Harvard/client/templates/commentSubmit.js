@@ -1,34 +1,34 @@
-Template.commentSubmit.created = function() {
-  Session.set('commentSubmitErrors', {});
+Template.answerSubmit.created = function() {
+  Session.set('answerSubmitErrors', {});
 }
 
-Template.commentSubmit.helpers({
+Template.answerSubmit.helpers({
   errorMessage: function(field) {
-    return Session.get('commentSubmitErrors')[field];
+    return Session.get('answerSubmitErrors')[field];
   },
   errorClass: function (field) {
-    return !!Session.get('commentSubmitErrors')[field] ? 'has-error' : '';
+    return !!Session.get('answerSubmitErrors')[field] ? 'has-error' : '';
   }
 });
 
-Template.commentSubmit.events({
-   // acquire user inputs and put into the comment variable when form is submitted
+Template.answerSubmit.events({
+   // acquire user inputs and put into the answer variable when form is submitted
   'submit form': function(e, template) {
     e.preventDefault();
 
     var $body = $(e.target).find('[name=body]');
-    var comment = {
+    var answer = {
       body: $body.val(),
-      postId: template.data._id
+      questionId: template.data._id
     };
 
     var errors = {};
-    if (! comment.body) {
+    if (! answer.body) {
       errors.body = "Please write some content";
-      return Session.set('commentSubmitErrors', errors);
+      return Session.set('answerSubmitErrors', errors);
     }
-    // call the method commentInsert (defined server side), which insert the comment into database
-    Meteor.call('commentInsert', comment, function(error, commentId) {
+    // call the method answerInsert (defined server side), which insert the answer into database
+    Meteor.call('answerInsert', answer, function(error, answerId) {
       if (error){
         throwError(error.reason);
       } else {

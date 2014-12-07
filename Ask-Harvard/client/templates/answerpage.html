@@ -1,15 +1,15 @@
 <template name="answerpage">
   <body class="answer-page">
     <div id="answer-page-content">
-      {{> task}}
+      {{> question}}
       <ul>    
-      	{{#each comments}}      
-      		{{> comment}}    
+      	{{#each answers}}      
+      		{{> answer}}    
       	{{/each}}  
       </ul>
       
       {{#if harvardStudent}}    
-        {{> commentSubmit}}  
+        {{> answerSubmit}}  
       {{else}}    
         <p>Please log in with a Harvard email to answer.</p>  
       {{/if}}
