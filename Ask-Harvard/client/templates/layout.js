@@ -7,10 +7,10 @@ Accounts.ui.config({
 Template.layout.helpers({
     // returns number of questions in database
     questionsCount: function () {
-      return Questions.find().count();
+      return Tasks.find().count();
     },   
     // returns number of comments in database
     answersCount: function () {
-    return Answers.find().count();
+    return Comments.find().count();
     }
   });

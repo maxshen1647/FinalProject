@@ -1,7 +1,7 @@
 // Start new mongo database for questions
-Questions = new Mongo.Collection("questions");
+Tasks = new Mongo.Collection("tasks");
 
-Questions.allow({  
+Tasks.allow({  
   insert: function(userId, doc) {    
   // only allow posting if you are logged in    
     return !! userId;

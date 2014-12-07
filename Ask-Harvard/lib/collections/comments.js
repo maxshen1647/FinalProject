@@ -1,47 +1,47 @@
-// Start new mongo database for answers
-Answers = new Mongo.Collection('answers');
+// Start new mongo database for comments
+Comments = new Mongo.Collection('comments');
 
-//allows removal of answers if logged in
-Answers.allow({  
+//allows removal of comments if logged in
+Comments.allow({  
   remove: function(userId, doc) {    
   // only allow deleting if you are logged in    
     return !! userId;
   }
 });
 
-//insert answer when method is called in the client side
+//insert comment when method is called in the client side
 Meteor.methods({  
-	answerInsert: function(answerAttributes) {    
+	commentInsert: function(commentAttributes) {    
 		check(this.userId, String);    
-		check(answerAttributes, {      
-			questionId: String,      
+		check(commentAttributes, {      
+			postId: String,      
 			body: String    
 		});    
 		var user = Meteor.user();    
-		var question = Questions.findOne(answerAttributes.questionId);    
-		if (!question)      
+		var post = Tasks.findOne(commentAttributes.postId);    
+		if (!post)      
 			alert('You must answer a question');    
-		answer = _.extend(answerAttributes, {      
+		comment = _.extend(commentAttributes, {      
 			userId: user._id,      
 			author: user.username,      
 			submitted: new Date(),
 			upvoters: [],
 			votes: 0    
 		});    
-		return Answers.insert(answer);  
+		return Comments.insert(comment);  
 	},
 
-	upvote: function(questionId) {
+	upvote: function(postId) {
 		check(this.userId, String); // produces error in console
-		check(questionId, String);
+		check(postId, String);
     
-        var affected = Answers.update({      
-          _id: questionId,       
+        var affected = Comments.update({      
+          _id: postId,       
           upvoters: {$ne: this.userId}    
         }, {      
           $addToSet: {upvoters: this.userId},      
           $inc: {votes: 1}    });    
     if (! affected)      
-      alert("You weren't able to upvote that question");
+      alert("You weren't able to upvote that post");
 	}	
 });

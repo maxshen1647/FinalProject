@@ -1,7 +1,7 @@
-Meteor.publish('Questions', function() {
-  return Questions.find();
+Meteor.publish('Tasks', function() {
+  return Tasks.find();
 });
 
-Meteor.publish('Answers', function() {
-  return Answers.find();
+Meteor.publish('Comments', function() {
+  return Comments.find();
 });
